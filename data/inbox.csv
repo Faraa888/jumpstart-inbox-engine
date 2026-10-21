@@ -1,0 +1,511 @@
+email_id,received_at,from_name,from_email,subject,body,candidate_stage,stream,startup
+E001,2026-10-12 07:20,Nia Moore,nmoore@example.com,My application,I applied last week. Is there anything else I need to do?,Applied,Marketing,
+E002,2026-10-12 08:12,Priya Shah,priya.shah@example.com,Any update on Copperleaf?,"Hi, I had my second interview with Copperleaf last Tuesday and haven't heard anything. Do you know when they'll get back to me? Thanks, Priya",Interviewing,Sales,Copperleaf
+E003,2026-10-12 08:23,Chloe Evans,chloe.evans@example.com,Quick question,How does the matching work?,Onboarded,Generalist,
+E004,2026-10-12 08:38,Lola Singh,lolasingh@example.com,Quick question,Is Jumpstart free for candidates?,Onboarded,Senior Operator,
+E005,2026-10-12 08:40,Tom Reilly,tom.reilly@example.com,Unsubscribe,Please take me off your mailing list.,Hired,Generalist,
+E006,2026-10-12 08:55,Hannah Lee,hannah.lee@example.com,Automatic reply: New roles this week,I'm out of the office until 21 October with limited access to email.,Onboarded,Marketing,
+E007,2026-10-12 09:20,Daniel Okafor,daniel.okafor@example.com,Video won't upload,I've tried three times to upload my intro video and it gets stuck at 90%. I'm on Chrome on a Mac. What am I doing wrong?,Onboarded,Sales,
+E008,2026-10-12 09:28,Jo (PodcastPro),jo@podcastpro.example.com,Podcast guest,Would your founder like to appear on our careers podcast?,Not a candidate,,
+E009,2026-10-12 09:35,Ryan Stone,ryan.stone@example.com,Status update,Just checking in on Quillstack. It's been 10 days since my interview.,Interviewing,Generalist,Quillstack
+E010,2026-10-12 09:43,Chloe Doherty,chloedoherty@example.com,Enquiry,Are you running any events soon?,Applied,Generalist,
+E011,2026-10-12 09:46,Pia Obi,pia.obi@example.com,Thanks!,Thank you for the quick reply yesterday.,Interviewing,Sales,
+E012,2026-10-12 09:47,Rania Chu,rania.chu4@example.com,Following up,"Hi, I interviewed with Fennel Labs last Friday and haven't heard back. Any update?",Interviewing,Generalist,Fennel Labs
+E013,2026-10-12 09:47,Aisha Rahman,aisha.rahman@example.com,Driftwell interview,"Hi team, I interviewed with Driftwell two weeks ago. They said I'd hear back in a few days but I've had nothing, despite emailing the founder twice. Is the role still open?",Interviewing,Generalist,Driftwell
+E014,2026-10-12 09:50,Chloe Allen,callen@example.com,Feedback on the platform,Can I filter roles by location? I'm based in Bristol.,Onboarded,Generalist,
+E015,2026-10-12 09:58,Jake Brennan,jakebrennan@example.com,Thank you,Just wanted to say the platform is brilliant.,Hired,Marketing,
+E016,2026-10-12 09:59,Eddie Foster,efoster@example.com,Stop emails,STOP,Rejected,Marketing,
+E017,2026-10-12 10:15,Marcus Bell,marcus.bell@example.com,Feedback?,I got a rejection from Pinecart on Friday. Is there any chance of getting feedback? I thought the case study went well.,Rejected,Senior Operator,Pinecart
+E018,2026-10-12 10:17,Callie Hill,callie.hill39@example.com,Automatic reply: New matches,Out of office. Back Wednesday.,Onboarded,Senior Operator,
+E019,2026-10-12 10:32,Sophie Turner,sophie.turner@example.com,Change of email,Can you change my login email to sophie.turner.work@example.com? I'm losing access to my uni email.,Onboarded,Marketing,
+E020,2026-10-12 10:33,Ivy Kaur,ivy.kaur84@example.com,Rejection,Is there any way to find out why Pinecart said no?,Rejected,Generalist,Pinecart
+E021,2026-10-12 11:05,Ravi Patel,ravi.patel@example.com,Application status,I applied to join Jumpstart 3 weeks ago and haven't heard anything. How long does it usually take?,Applied,Sales,
+E022,2026-10-12 11:06,Cerys Osei,cerys.osei@example.com,Question,Can I refer a friend?,Applied,Marketing,
+E023,2026-10-12 11:07,Evan Young,evan.young@example.com,Did you get my application?,I applied last week. Is there anything else I need to do?,Applied,Senior Operator,
+E024,2026-10-12 11:08,Reece Iqbal,riqbal@example.com,Suggestion,I've had very few matches this month. Is my profile OK?,Onboarded,Senior Operator,
+E025,2026-10-12 11:18,Neha Allen,nehaallen@example.com,Automatic reply: Your weekly roles,I'm currently travelling with limited access to email.,Onboarded,Marketing,
+E026,2026-10-12 11:23,Saffi Parry,saffi.parry@example.com,Change stream,Can I switch to a different stream?,Onboarded,Sales,
+E027,2026-10-12 11:30,Ella Morgan,ella.morgan@example.com,Thank you!,Just wanted to say thanks for introducing me to Fennel Labs. I start on Monday and I'm so excited!,Hired,Marketing,Fennel Labs
+E028,2026-10-12 11:40,Joel Chu,joelchu@example.com,Quick question about the video,What should I talk about in my intro video?,Onboarded,Marketing,
+E029,2026-10-12 11:41,Umar Dawson,umardawson@example.com,Any feedback?,Got a no from Copperleaf after the second round. Any feedback would really help.,Rejected,Senior Operator,Copperleaf
+E030,2026-10-12 11:53,Alice Knight,alice.knight@example.com,Any news?,Just checking in on Tidewater. It's been 15 days since my interview.,Interviewing,Sales,Tidewater
+E031,2026-10-12 12:01,Jonah Cahill,jonah.cahill@example.com,Application status,My application still says 'under review'. Is that normal?,Applied,Senior Operator,
+E032,2026-10-12 12:02,James Whitfield,james.whitfield@example.com,Visa sponsorship,I'm on a Graduate visa which runs out next June. Do any of the startups on Jumpstart sponsor Skilled Worker visas? How can I filter for them?,Onboarded,Generalist,
+E033,2026-10-12 12:07,Caleb Vance,cvance@example.com,Thanks!,Just wanted to say the platform is brilliant.,Interviewing,Sales,
+E034,2026-10-12 12:08,Raj Wood,raj.wood6@example.com,Application status,My application still says 'under review'. Is that normal?,Applied,Senior Operator,
+E035,2026-10-12 12:12,Rhea Doherty,rdoherty@example.com,Enquiry,Is there an age limit for joining?,Onboarded,Generalist,
+E036,2026-10-12 12:14,Neha Reid,nreid@example.com,Matches,Can I see roles that offer visa sponsorship?,Onboarded,Marketing,
+E037,2026-10-12 12:19,Anna Gordon,anna.gordon@example.com,Thank you,"Really enjoyed the event last week, thanks!",Onboarded,Sales,
+E038,2026-10-12 12:30,Eli Banks,elibanks@example.com,Change my email,Can you update my email address to a new one? I'm losing access to this one.,Onboarded,Generalist,
+E039,2026-10-12 12:40,Chloe Adams,chloe.adams@example.com,Why am I seeing engineering roles?,My matches this week are mostly software engineering roles but I'm in the Marketing stream. Can you fix this?,Onboarded,Marketing,
+E040,2026-10-12 12:48,Isaac Thorne,isaac.thorne@example.com,Quick chase,"Sorry to bother you, is there any update from Nimbleway?",Interviewing,Senior Operator,Nimbleway
+E041,2026-10-12 12:59,Molly Andrews,mollyandrews@example.com,Quick chase,Just checking in on Brindle AI. It's been 11 days since my interview.,Interviewing,Senior Operator,Brindle AI
+E042,2026-10-12 13:15,Ben Carter,ben.carter@example.com,Re: Interview confirmed - Harbourlight,"Hi, I can't see the Harbourlight role on the platform any more. Has it closed? My interview is on Thursday.",Interviewing,Sales,Harbourlight
+E043,2026-10-12 13:35,Eli Gill,eli.gill@example.com,Remove me,Please unsubscribe me.,Rejected,Sales,
+E044,2026-10-12 13:45,Gabe Clarke,gclarke@example.com,My application,I applied last week. Is there anything else I need to do?,Applied,Senior Operator,
+E045,2026-10-12 13:48,Zoe Shah,zshah@example.com,STOP,Take me off this list.,Onboarded,Senior Operator,
+E046,2026-10-12 13:49,Seb Bose,seb.bose@example.com,Headline,How do I edit my profile headline?,Onboarded,Sales,
+E047,2026-10-12 13:50,Grace Kim,grace.kim@example.com,Refer a friend,My friend is graduating next summer and would love Jumpstart. Is there a referral link I can send her?,Hired,Generalist,
+E048,2026-10-12 14:18,Chloe Gill,chloe.gill@example.com,Roles,The apply button doesn't work on my phone.,Onboarded,Senior Operator,
+E049,2026-10-12 14:22,Oliver Grant,oliver.grant@example.com,Quillstack offer,"Hi, Quillstack have offered me the Account Executive role (£42k + equity) and want an answer by 5pm on Monday 19th. I'm also in the final round with Brindle AI on Wednesday, and that's the one I really want. Any advice?",Offer,Sales,Quillstack; Brindle AI
+E050,2026-10-12 14:23,Jess Dawson,jessdawson@example.com,Quick question about the video,How long should my intro video be?,Onboarded,Marketing,
+E051,2026-10-12 14:23,Callie West,callie.west@example.com,Unsubscribe,STOP,Rejected,Generalist,
+E052,2026-10-12 14:33,Malik Page,malikpage@example.com,Re: Interview update,"Hi team, any news from Nimbleway? Happy to wait, just keen to know where I stand.",Interviewing,Sales,Nimbleway
+E053,2026-10-12 14:41,Bella Nolan,bnolan@example.com,Re: Interview update,"Hi team, any news from Larkspur? Happy to wait, just keen to know where I stand.",Interviewing,Generalist,Larkspur
+E054,2026-10-12 14:51,Amir Owen,aowen@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Senior Operator,
+E055,2026-10-12 15:00,Ryan Ward,rward@example.com,Unsubscribe,STOP,Rejected,Sales,
+E056,2026-10-12 15:01,Mia Johnson,mia.johnson@example.com,Re: Video upload stuck,"Same as before, the upload bar freezes. Is there another way to send my video?",Onboarded,Sales,
+E057,2026-10-12 15:30,Leo Martins,leo.martins@example.com,Interview update,"Hello, just checking whether Copperleaf have made a decision after my final round last week?",Interviewing,Senior Operator,Copperleaf
+E058,2026-10-12 15:53,Rosa Hunt,rosahunt@example.com,Enquiry,Do I need the right to work in the UK?,Applied,Sales,
+E059,2026-10-12 16:01,Clara Dale,cdale@example.com,Application status,"Hi, can you confirm you received my application?",Applied,Sales,
+E060,2026-10-12 16:10,Zara Hussain,zara.hussain@example.com,Quick question about Driftwell,Driftwell have asked me to do a two-week trial before they decide. They said it's unpaid but it'd be a great chance to show what I can do. Is that normal? I really want the job.,Interviewing,Generalist,Driftwell
+E061,2026-10-12 16:37,Emeka Thorne,ethorne@example.com,Interview prep,Any tips for my first interview with Nimbleway?,Interviewing,Sales,Nimbleway
+E062,2026-10-12 16:41,Esme Burke,esme.burke84@example.com,Thank you,Thanks so much for your help this week!,Interviewing,Marketing,
+E063,2026-10-12 16:45,Noah Williams,noah.williams@example.com,Re: Your weekly roles,These roles are great but none of them are in Manchester. Do you have any outside London?,Onboarded,Sales,
+E064,2026-10-12 17:15,Layla Foster,layla.foster26@example.com,Password,How do I reset my login? The link has expired.,Onboarded,Marketing,
+E065,2026-10-12 17:20,Lucy Barnes (GrowthRocket),lucy@growthrocket.example.com,Partnership opportunity,"Hi Jumpstart team, we help recruitment platforms 10x their LinkedIn leads. Can we book 15 minutes this week?",Not a candidate,,
+E066,2026-10-12 17:25,Willow Rowe,willow.rowe@example.com,Quick question,Is there an age limit for joining?,Applied,Generalist,
+E067,2026-10-12 17:33,Orla Kelly,orlakelly@example.com,Application status,"Hi, can you confirm you received my application?",Applied,Marketing,
+E068,2026-10-12 17:44,Finn Wade,finn.wade96@example.com,Did you get my application?,My application still says 'under review'. Is that normal?,Applied,Senior Operator,
+E069,2026-10-12 17:52,Finn Page,finn.page@example.com,Re: Your weekly roles,Most of my matches aren't relevant to my stream.,Onboarded,Sales,
+E070,2026-10-12 18:05,Amelia Clarke,amelia.clarke@example.com,Delete my account,Please delete my account and all the data you hold on me. I've found a job elsewhere.,Onboarded,Marketing,
+E071,2026-10-12 18:10,Theo Wood,twood@example.com,unsubscribe,STOP,Hired,Senior Operator,
+E072,2026-10-12 18:19,Finn Cohen,fcohen@example.com,Re: Jumpstart newsletter,The founder interview was brilliant.,Onboarded,Marketing,
+E073,2026-10-12 18:29,Seb Pike,sebpike@example.com,Intro video,Is the video compulsory?,Onboarded,Generalist,
+E074,2026-10-12 18:29,Liam Kim,liam.kim@example.com,Thank you,Thanks so much for your help this week!,Onboarded,Sales,
+E075,2026-10-12 19:05,Liam Akhtar,liam.akhtar15@example.com,Re: Interview update,"Hi, could you chase Fennel Labs for me? Still waiting after my first round.",Interviewing,Marketing,Fennel Labs
+E076,2026-10-12 19:05,Flora Hart,florahart@example.com,Did you get my application?,"Hi, I applied three weeks ago and haven't heard anything. How long does it take?",Applied,Senior Operator,
+E077,2026-10-12 19:08,Esme Dale,esme.dale17@example.com,Application status,My application still says 'under review'. Is that normal?,Applied,Generalist,
+E078,2026-10-12 19:30,Samuel Osei,samuel.osei@example.com,Feedback request,"Hi, I was rejected by Tallowby after the first interview. Could you share any feedback?",Rejected,Sales,Tallowby
+E079,2026-10-12 19:35,Rania Lowe,ranialowe@example.com,Application,I applied last week. Is there anything else I need to do?,Applied,Senior Operator,
+E080,2026-10-12 19:45,Caleb Knight,calebknight@example.com,Status update,"Hi, I interviewed with Quillstack 10 days ago and haven't heard back. Any update?",Interviewing,Marketing,Quillstack
+E081,2026-10-12 20:14,Amir Clarke,amirclarke@example.com,Any feedback?,Is there any way to find out why Brindle AI said no?,Rejected,Marketing,Brindle AI
+E082,2026-10-12 20:53,Efe Marsh,efe.marsh11@example.com,Quick question about the video,Does my video need to be professional?,Onboarded,Generalist,
+E083,2026-10-12 20:55,Anna Mason,anna.mason@example.com,Application,I applied last week. Is there anything else I need to do?,Applied,Senior Operator,
+E084,2026-10-12 21:02,Alfie Parry,aparry@example.com,Re: Your weekly roles,Could you add remote-only roles as a filter?,Onboarded,Generalist,
+E085,2026-10-12 21:12,Isla Thompson,isla.thompson@example.com,application,hi did u get my application? i submitted on sunday but got no confirmation email,Applied,Generalist,
+E086,2026-10-12 21:16,Jake Shaw,jake.shaw@example.com,Following up,Do you know if Quillstack have made a decision yet? I had my final round last week.,Interviewing,Sales,Quillstack
+E087,2026-10-12 21:37,Ryan Ahmed,ryan.ahmed60@example.com,Application,"Hi, can you confirm you received my application?",Applied,Generalist,
+E088,2026-10-12 21:55,Bronwen Hill,bronwenhill@example.com,Rejection,I was rejected by Pinecart. Could I get any feedback?,Rejected,Generalist,Pinecart
+E089,2026-10-12 22:25,Imogen Mann,imogenmann@example.com,Urgent question!!,What time do you send the weekly roles email?,Onboarded,Marketing,
+E090,2026-10-12 22:29,Gabe Taylor,gabe.taylor93@example.com,Rejection,Got a no from Tidewater after the second round. Any feedback would really help.,Rejected,Generalist,Tidewater
+E091,2026-10-13 07:45,Henry Walsh,henry.walsh@example.com,Interview tomorrow - need to reschedule,"I'm so sorry, I've come down with flu and can't make my interview with Brindle AI tomorrow at 10am. I don't have the founder's number. Can you let them know and help me reschedule?",Interviewing,Generalist,Brindle AI
+E092,2026-10-13 08:20,Ruby Evans,ruby.evans@example.com,Automatic reply,Thanks for your email. I'm on annual leave and will respond on my return.,Onboarded,Sales,
+E093,2026-10-13 08:27,Tia Kaur,tia.kaur@example.com,Quick chase,"Sorry to bother you, is there any update from Bramble Health?",Interviewing,Senior Operator,Bramble Health
+E094,2026-10-13 08:54,Kiran Evans,kiran.evans@example.com,Interview advice,Orchard Pay asked for my salary expectations. What should I say?,Interviewing,Senior Operator,Orchard Pay
+E095,2026-10-13 08:55,Aisha Rahman,aisha.rahman@example.com,Re: Driftwell interview,"Hi again, still nothing from Driftwell. Could you chase them for me?",Interviewing,Generalist,Driftwell
+E096,2026-10-13 09:10,Arjun Parry,aparry11@example.com,Application,When will I hear back about joining Jumpstart?,Applied,Marketing,
+E097,2026-10-13 09:22,Carlos Chandra,cchandra@example.com,Feedback on the platform,My matches are all for very junior roles.,Onboarded,Senior Operator,
+E098,2026-10-13 09:23,Nathan Lane,nlane@example.com,Application,I applied last week. Is there anything else I need to do?,Applied,Sales,
+E099,2026-10-13 09:23,Dylan Kelly,dkelly@example.com,Matches,Most of my matches aren't relevant to my stream.,Onboarded,Marketing,
+E100,2026-10-13 09:30,Jack Robinson,jack.robinson@example.com,Video,Is the intro video compulsory? I'm quite camera shy.,Onboarded,Senior Operator,
+E101,2026-10-13 09:38,Willow Chu,wchu@example.com,Delete my account,I'd like my profile and data removed please.,Onboarded,Sales,
+E102,2026-10-13 09:47,Rania Chu,rania.chu4@example.com,Re: Following up,"Hi, following up again on Fennel Labs. Still nothing.",Interviewing,Generalist,Fennel Labs
+E103,2026-10-13 10:02,Freya Hughes,freya.hughes@example.com,Salary question,Pinecart have asked what my current salary is. Do I have to tell them?,Interviewing,Sales,Pinecart
+E104,2026-10-13 10:16,Phoebe Rao,phoeberao@example.com,My application,"Hi, can you confirm you received my application?",Applied,Marketing,
+E105,2026-10-13 10:40,Ethan Wright,ethan.wright@example.com,Status update please,"Hi, any news from Saltmarsh? It's been 10 days since my interview.",Interviewing,Marketing,Saltmarsh
+E106,2026-10-13 10:46,Pia Abbott,pia.abbott@example.com,Quick question about the video,Can I upload a video from my phone?,Onboarded,Marketing,
+E107,2026-10-13 10:51,Aaron Khan,aaronkhan@example.com,Hi,Is Jumpstart free for candidates?,Applied,Generalist,
+E108,2026-10-13 11:15,Lily Scott,lily.scott@example.com,Wrong name on profile,My profile shows my name as 'Lily Scot'. Can you correct it?,Onboarded,Generalist,
+E109,2026-10-13 11:35,Darcy Ng,dng@example.com,Quick thank you,Just wanted to say the platform is brilliant.,Hired,Marketing,
+E110,2026-10-13 11:46,Joel Stone,joel.stone43@example.com,Quick chase,"Hi, could you chase Quillstack for me? Still waiting after my first round.",Interviewing,Senior Operator,Quillstack
+E111,2026-10-13 11:48,Clara Cross,clara.cross62@example.com,Change my email,Can you update my email address to a new one? I'm losing access to this one.,Onboarded,Generalist,
+E112,2026-10-13 11:48,Kwame Asante,kwame.asante@example.com,Offer accepted!,Just accepted the offer from Copperleaf! Start date is 9 November. Thank you so much for all your help.,Hired,Sales,Copperleaf
+E113,2026-10-13 11:50,Flora Iqbal,fiqbal@example.com,Automatic reply: New matches,Out of office. Back Monday.,Onboarded,Generalist,
+E114,2026-10-13 11:55,Kara Wade,kara.wade61@example.com,Any news?,Do you know if Fennel Labs have made a decision yet? I had my final round two weeks ago.,Interviewing,Sales,Fennel Labs
+E115,2026-10-13 11:59,Conor Shaw,conorshaw@example.com,Interview update,"Hi, I interviewed with Brindle AI last week and haven't heard back. Any update?",Interviewing,Senior Operator,Brindle AI
+E116,2026-10-13 12:17,Saffi Singh,ssingh@example.com,Delete my account,"Please close my account, I've found a job.",Onboarded,Generalist,
+E117,2026-10-13 12:30,Dev Malhotra,dev.malhotra@example.com,Quick question about my profile,"Hi! Loving the platform. Quick one: is there a way to change my headline? Also, not sure if it's just me, but when I open my CV it shows someone called Rachel Green's instead, with her phone number and address on it. Anyway, thanks!",Onboarded,Generalist,
+E118,2026-10-13 12:37,Yusuf Nash,yusuf.nash44@example.com,Joining Jumpstart,"Hi, can you confirm you received my application?",Applied,Sales,
+E119,2026-10-13 12:38,Kiran Chu,kiranchu@example.com,Update on my application,"Hi, I interviewed with Moorgate AI last Friday and haven't heard back. Any update?",Interviewing,Senior Operator,Moorgate AI
+E120,2026-10-13 12:40,Lola Dale,lola.dale@example.com,Question,Can I refer a friend?,Onboarded,Generalist,
+E121,2026-10-13 12:48,Rosa Singh,rsingh@example.com,Did you get my application?,"Hi, can you confirm you received my application?",Applied,Sales,
+E122,2026-10-13 12:51,Jonah Young,jonahyoung@example.com,Suggestion,The apply button doesn't work on my phone.,Onboarded,Marketing,
+E123,2026-10-13 12:51,Chloe Abbott,cabbott@example.com,Quick question,Can I be in two streams at once?,Applied,Sales,
+E124,2026-10-13 12:55,Hamza Jones,hamzajones@example.com,Quick chase,"Hi, could you chase Kestrel Labs for me? Still waiting after my second round.",Interviewing,Sales,Kestrel Labs
+E125,2026-10-13 12:59,Dylan Jackson,dylan.jackson99@example.com,Headline,How do I edit my profile headline?,Onboarded,Generalist,
+E126,2026-10-13 13:05,Owen Wade,owade@example.com,Automatic reply: Your weekly roles,Thanks for your message. I'm on annual leave and will reply on my return.,Onboarded,Sales,
+E127,2026-10-13 13:05,Harriet Cole,harriet.cole@example.com,Unsubscribe,Unsubscribe me please,Onboarded,Marketing,
+E128,2026-10-13 13:06,Conor Dunne,cdunne@example.com,Phone number,Can I add a phone number to my profile?,Onboarded,Senior Operator,
+E129,2026-10-13 13:23,Efe Evans,efe.evans80@example.com,Remove me,Take me off this list.,Rejected,Marketing,
+E130,2026-10-13 13:40,Mohammed Ali,mohammed.ali@example.com,Matching,I've had 0 matches for 3 weeks now. Is my profile visible?,Onboarded,Senior Operator,
+E131,2026-10-13 13:43,Faye Lamb,flamb@example.com,My application,Did my application come through? I didn't get a confirmation email.,Applied,Generalist,
+E132,2026-10-13 14:02,Iman Dawson,iman.dawson@example.com,Matches,I've had very few matches this month. Is my profile OK?,Onboarded,Sales,
+E133,2026-10-13 14:10,Poppy Bennett,poppy.bennett@example.com,Re: Rejection - Driftwell,I got a generic rejection from Driftwell after 3 rounds and a take-home. No feedback at all. Honestly that's pretty poor.,Rejected,Marketing,Driftwell
+E134,2026-10-13 14:22,Ryan Mann,ryan.mann@example.com,Status update,"Sorry to bother you, is there any update from Juniper Loop?",Interviewing,Senior Operator,Juniper Loop
+E135,2026-10-13 14:55,Archie Ward,archie.ward@example.com,Change stream,"I signed up for Sales but I'd like to be considered for Marketing roles too. Can I switch, or be in both?",Onboarded,Sales,
+E136,2026-10-13 15:14,Malik Osei,malikosei@example.com,Interview update,"Sorry to bother you, is there any update from Pinecart?",Interviewing,Generalist,Pinecart
+E137,2026-10-13 15:19,Arjun Stone,arjun.stone@example.com,Re: Your weekly roles,I've had very few matches this month. Is my profile OK?,Onboarded,Marketing,
+E138,2026-10-13 15:30,Nina Kowalski,nina.kowalski@example.com,Interview prep,Do you have any tips for my final interview with Fennel Labs on Friday? It's with the CEO.,Interviewing,Generalist,Fennel Labs
+E139,2026-10-13 15:32,Anya Hart,anya.hart26@example.com,Feedback request,Is there any way to find out why Kestrel Labs said no?,Rejected,Generalist,Kestrel Labs
+E140,2026-10-13 15:33,Sana Lane,slane@example.com,Application status,When will I hear back about joining Jumpstart?,Applied,Sales,
+E141,2026-10-13 15:43,Luca Shah,luca.shah@example.com,Status update,Just checking in on Juniper Loop. It's been 12 days since my interview.,Interviewing,Sales,Juniper Loop
+E142,2026-10-13 15:53,Omar Allen,oallen@example.com,Re: Interview update,Do you know if Moorgate AI have made a decision yet? I had my final round on Tuesday.,Interviewing,Senior Operator,Moorgate AI
+E143,2026-10-13 16:05,Daniel Okafor,daniel.okafor@example.com,Re: Video won't upload,Still not working. I've now tried on Safari too.,Onboarded,Sales,
+E144,2026-10-13 16:06,Umar Akhtar,umar.akhtar@example.com,Quick question about the video,Does my video need to be professional?,Onboarded,Marketing,
+E145,2026-10-13 16:23,Eddie Iqbal,eddieiqbal@example.com,Any news?,"Sorry to bother you, is there any update from Larkspur?",Interviewing,Sales,Larkspur
+E146,2026-10-13 16:31,Alice Das,alice.das@example.com,Joining Jumpstart,When will I hear back about joining Jumpstart?,Applied,Sales,
+E147,2026-10-13 16:32,Cerys Taylor,cerystaylor@example.com,Interview advice,Any tips for my first interview with Kestrel Labs?,Interviewing,Generalist,Kestrel Labs
+E148,2026-10-13 16:33,Kiran Barker,kiranbarker@example.com,Phone number,Can I add a phone number to my profile?,Onboarded,Generalist,
+E149,2026-10-13 16:35,Gabe Walsh,gabe.walsh@example.com,Application,When will I hear back about joining Jumpstart?,Applied,Generalist,
+E150,2026-10-13 16:36,Zoe Hunt,zoe.hunt69@example.com,Enquiry,Is Jumpstart free for candidates?,Applied,Senior Operator,
+E151,2026-10-13 16:40,Callum Reid,callum.reid@example.com,Application status,"Hi, I applied two weeks ago. Is there any way of knowing where I am in the process?",Applied,Sales,
+E152,2026-10-13 16:46,Flora Cross,flora.cross32@example.com,Quick thank you,Thank you for the quick reply yesterday.,Hired,Sales,
+E153,2026-10-13 17:08,Harry Evans,hevans@example.com,Re: Jumpstart newsletter,"Great newsletter, thanks.",Onboarded,Sales,
+E154,2026-10-13 17:15,Jade Simmons,jade.simmons@example.com,Can I pause my profile?,I'm going travelling for two months. Can I pause my account so I don't get matched?,Onboarded,Marketing,
+E155,2026-10-13 17:18,Raj Quinn,raj.quinn@example.com,My application,"Hi, can you confirm you received my application?",Applied,Sales,
+E156,2026-10-13 17:19,Phoebe Young,phoebe.young89@example.com,Application,My application still says 'under review'. Is that normal?,Applied,Sales,
+E157,2026-10-13 17:47,Arjun Nolan,anolan@example.com,Feedback on the platform,Can I filter roles by location? I'm based in Bristol.,Onboarded,Sales,
+E158,2026-10-13 17:54,Gabe Hunt,gabe.hunt@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Sales,
+E159,2026-10-13 18:19,Kiran Cohen,kirancohen@example.com,Interview prep,How many interviews do startups usually do?,Interviewing,Sales,Fennel Labs
+E160,2026-10-13 18:24,Carlos Osei,cosei@example.com,Did you get my application?,My application still says 'under review'. Is that normal?,Applied,Marketing,
+E161,2026-10-13 18:30,Tom Fletcher,tom.fletcher@example.com,Re: Your weekly roles,"Stop sending these, I already have a job",Hired,Sales,
+E162,2026-10-13 18:46,Imogen Walsh,imogen.walsh@example.com,STOP,unsubscribe,Hired,Sales,
+E163,2026-10-13 19:02,Chloe Lamb,chloelamb@example.com,Re: Your weekly roles,I've had very few matches this month. Is my profile OK?,Onboarded,Marketing,
+E164,2026-10-13 19:26,Sam Khan,sam.khan@example.com,Advice please,How many interviews do startups usually do?,Interviewing,Generalist,Tallowby
+E165,2026-10-13 19:42,Luca Iqbal,luca.iqbal30@example.com,Close account,Please delete my account and data.,Onboarded,Marketing,
+E166,2026-10-13 19:54,Erin Lowe,erin.lowe3@example.com,Question,Are you running any events soon?,Applied,Marketing,
+E167,2026-10-13 20:05,Liam Akhtar,liam.akhtar15@example.com,Re: Interview update,Still no news from Fennel Labs. Should I assume it's a no?,Interviewing,Marketing,Fennel Labs
+E168,2026-10-13 20:10,Sara Lindqvist,sara.lindqvist@example.com,Saltmarsh interview,"Hi, I had my first interview at Saltmarsh today. It was a bit odd: the co-founder asked how old I was and whether I was planning to have kids any time soon. Is that normal at startups? I'm still keen on the role but wasn't sure how to take it.",Interviewing,Generalist,Saltmarsh
+E169,2026-10-13 20:17,Kemi Nolan,kemi.nolan94@example.com,Status update,"Hi, could you chase Juniper Loop for me? Still waiting after my second round.",Interviewing,Marketing,Juniper Loop
+E170,2026-10-13 20:31,Emeka Hayes,ehayes@example.com,Feedback request,I was rejected by Bramble Health. Could I get any feedback?,Rejected,Generalist,Bramble Health
+E171,2026-10-13 20:37,Alfie Tan,alfietan@example.com,Remove me,Stop sending me these emails please.,Onboarded,Sales,
+E172,2026-10-13 21:12,Kai Khan,kaikhan@example.com,Automatic reply: New matches,Out of office. Back 26 October.,Hired,Marketing,
+E173,2026-10-13 21:37,Tia Swift,tswift@example.com,Update on my application,"Hi, I interviewed with Fennel Labs last Friday and haven't heard back. Any update?",Interviewing,Generalist,Fennel Labs
+E174,2026-10-13 21:49,Alfie Gill,alfie.gill@example.com,My application,My application still says 'under review'. Is that normal?,Applied,Sales,
+E175,2026-10-13 22:26,Willow Young,willow.young49@example.com,Suggestion,Most of my matches aren't relevant to my stream.,Onboarded,Sales,
+E176,2026-10-13 22:34,Faye Andrews,faye.andrews2@example.com,Pause account,Can I pause my profile for a few weeks?,Onboarded,Sales,
+E177,2026-10-13 22:57,Imogen Dawson,imogen.dawson@example.com,Enquiry,Is Jumpstart free for candidates?,Onboarded,Sales,
+E178,2026-10-14 07:21,Molly Walsh,mwalsh@example.com,Any news?,"Hi, could you chase Quillstack for me? Still waiting after my second round.",Interviewing,Generalist,Quillstack
+E179,2026-10-14 07:55,Ian Moss,ian.moss@example.com,Automatic reply: Your matches,I am currently out of the office. For urgent matters please contact my manager.,Onboarded,Senior Operator,
+E180,2026-10-14 08:24,Chen Murphy,cmurphy@example.com,Re: Interview update,"Hi team, any news from Juniper Loop? Happy to wait, just keen to know where I stand.",Interviewing,Generalist,Juniper Loop
+E181,2026-10-14 08:30,Priya Shah,priya.shah@example.com,Re: Any update on Copperleaf?,"Hi, just following up on this. Any news?",Interviewing,Sales,Copperleaf
+E182,2026-10-14 09:00,Hattie Hart,hhart@example.com,Automatic reply: New matches,Out of office. Back Wednesday.,Hired,Generalist,
+E183,2026-10-14 09:05,Felix Grant,felix.grant@example.com,Feedback,Could I get feedback from Quillstack? I was rejected after the second round.,Rejected,Sales,Quillstack
+E184,2026-10-14 09:19,Sofia Wong,swong@example.com,Automatic reply: New matches,Out of office. Back next week.,Onboarded,Marketing,
+E185,2026-10-14 09:40,Hannah Price,hannah.price@example.com,Video upload error,Getting 'Upload failed: error 413' when I upload my video. It's about 3 minutes long.,Onboarded,Marketing,
+E186,2026-10-14 09:45,Reece Allen,rallen@example.com,Did you get my application?,"Hi, I applied a week ago and haven't heard anything. How long does it take?",Applied,Senior Operator,
+E187,2026-10-14 09:50,Dan Doherty,dan.doherty82@example.com,Enquiry,Do startups see my video before my CV?,Onboarded,Sales,
+E188,2026-10-14 09:59,Ashley Lamb,ashley.lamb45@example.com,Update on my application,"Sorry to bother you, is there any update from Moorgate AI?",Interviewing,Sales,Moorgate AI
+E189,2026-10-14 10:15,Leo Martins,leo.martins@example.com,Re: Interview update,"Hi, still waiting to hear from Copperleaf. Could you nudge them?",Interviewing,Senior Operator,Copperleaf
+E190,2026-10-14 10:18,Ashley Cross,ashleycross@example.com,Headline,How do I edit my profile headline?,Onboarded,Senior Operator,
+E191,2026-10-14 10:37,Abby Webb,awebb@example.com,Question,Can I apply to more than one role at a startup?,Applied,Sales,
+E192,2026-10-14 10:49,Raj Dunne,raj.dunne@example.com,Re: Jumpstart newsletter,"Great newsletter, thanks.",Onboarded,Sales,
+E193,2026-10-14 10:50,Rosie Allen,rosie.allen@example.com,Is Jumpstart free?,Do I have to pay anything to use Jumpstart as a candidate?,Applied,Generalist,
+E194,2026-10-14 11:03,Esme Hayes,esme.hayes84@example.com,Interview prep,Should I send a thank-you note after my interview with Brindle AI?,Interviewing,Generalist,Brindle AI
+E195,2026-10-14 11:20,Ibrahim Yusuf,ibrahim.yusuf@example.com,Re: Driftwell,Third time asking now. Can someone please tell me whether Driftwell are still hiring? I've turned down another interview because of this.,Interviewing,Sales,Driftwell
+E196,2026-10-14 11:24,Finn Parry,finn.parry25@example.com,Quick question about the video,Can I upload a video from my phone?,Onboarded,Senior Operator,
+E197,2026-10-14 11:43,Erin Foster,erin.foster@example.com,Joining Jumpstart,When will I hear back about joining Jumpstart?,Applied,Marketing,
+E198,2026-10-14 11:53,Bronwen Wood,bwood@example.com,Did you get my application?,When will I hear back about joining Jumpstart?,Applied,Marketing,
+E199,2026-10-14 11:55,Charlotte King,charlotte.king@example.com,Thank you,"Thanks for the feedback call yesterday, really useful.",Rejected,Marketing,
+E200,2026-10-14 11:59,Conor Shaw,conorshaw@example.com,Re: Interview update,"Hi, following up again on Brindle AI. Still nothing.",Interviewing,Senior Operator,Brindle AI
+E201,2026-10-14 11:59,Kara Boyd,kara.boyd@example.com,Thanks!,"Really enjoyed the event last week, thanks!",Interviewing,Senior Operator,
+E202,2026-10-14 12:03,Rania Quinn,rania.quinn@example.com,Re: Interview update,"Hi, I interviewed with Nimbleway 10 days ago and haven't heard back. Any update?",Interviewing,Marketing,Nimbleway
+E203,2026-10-14 12:05,Josh Kerr,josh.kerr@example.com,URGENT!!!,"Need to change my profile photo ASAP, the current one is from uni. How do I do it?",Onboarded,Sales,
+E204,2026-10-14 12:24,Zac Kelly,zac.kelly4@example.com,Remove me,unsubscribe,Rejected,Senior Operator,
+E205,2026-10-14 12:29,Eddie Marsh,eddiemarsh@example.com,Re: Interview update,"Hi team, any news from Pinecart? Happy to wait, just keen to know where I stand.",Interviewing,Generalist,Pinecart
+E206,2026-10-14 12:30,Max Turner,max.turner@example.com,Two offers - help!,"I've got offers from Fennel Labs and Pinecart, and both want an answer by Friday. Fennel pays £3k less but has better equity. Can I talk to someone today?",Offer,Generalist,Fennel Labs; Pinecart
+E207,2026-10-14 12:31,Maya Bose,maya.bose@example.com,Re: Your weekly roles,Is there a way to set a minimum salary?,Onboarded,Senior Operator,
+E208,2026-10-14 12:33,Abby Cross,abby.cross@example.com,Roles,Is there a way to set a minimum salary?,Onboarded,Generalist,
+E209,2026-10-14 12:58,Rosa Kaur,rosakaur@example.com,Advice please,Should I send a thank-you note after my interview with Kestrel Labs?,Interviewing,Sales,Kestrel Labs
+E210,2026-10-14 13:05,Ava Robinson,ava.robinson@example.com,Login issue,I can't log in. The magic link email never arrives.,Onboarded,Sales,
+E211,2026-10-14 13:11,Rosa Hayes,rhayes@example.com,Enquiry,Is Jumpstart free for candidates?,Onboarded,Generalist,
+E212,2026-10-14 13:20,Owen Hayes,owen.hayes@example.com,Hi,Is there an age limit for joining?,Onboarded,Sales,
+E213,2026-10-14 13:32,Sam Wade,sam.wade@example.com,Re: Interview update,"Hi team, any news from Orchard Pay? Happy to wait, just keen to know where I stand.",Interviewing,Marketing,Orchard Pay
+E214,2026-10-14 13:40,Ben Carter,ben.carter@example.com,Re: Interview confirmed - Harbourlight,"Hi, the Harbourlight interview is tomorrow and the role is still missing from my dashboard. Is it still happening?",Interviewing,Sales,Harbourlight
+E215,2026-10-14 13:47,Rania Chu,rania.chu4@example.com,Re: Following up,Still no news from Fennel Labs. Should I assume it's a no?,Interviewing,Generalist,Fennel Labs
+E216,2026-10-14 13:52,Lola Lowe,lola.lowe67@example.com,Feedback request,Is there any way to find out why Moorgate AI said no?,Rejected,Sales,Moorgate AI
+E217,2026-10-14 14:13,Jake Jackson,jake.jackson@example.com,Any feedback?,Is there any way to find out why Brindle AI said no?,Rejected,Sales,Brindle AI
+E218,2026-10-14 14:15,Megan Lewis,megan.lewis@example.com,Harbourlight role,I applied for the Harbourlight Growth Associate role but now I can't find it. Did I do something wrong?,Onboarded,Marketing,Harbourlight
+E219,2026-10-14 14:43,Emeka Gill,emekagill@example.com,Automatic reply: Your weekly roles,Out of office. Back Monday.,Hired,Senior Operator,
+E220,2026-10-14 14:50,Oscar Hall,oscar.hall@example.com,Unsubscribe,Please unsubscribe me from all emails.,Onboarded,Generalist,
+E221,2026-10-14 15:08,Amy Jones,ajones@example.com,Any feedback?,Is there any way to find out why Tidewater said no?,Rejected,Senior Operator,Tidewater
+E222,2026-10-14 15:11,Kemi Reid,kemi.reid@example.com,Advice please,Fennel Labs want a short case study. Any advice?,Interviewing,Sales,Fennel Labs
+E223,2026-10-14 15:22,Dan Mason,dan.mason31@example.com,Stop emails,Stop sending me these emails please.,Hired,Marketing,
+E224,2026-10-14 15:25,Tariq Mahmood,tariq.mahmood@example.com,Application status,"Hello, it's been almost a month since I applied. Should I reapply?",Applied,Senior Operator,
+E225,2026-10-14 15:29,Bronwen Farrell,bronwenfarrell@example.com,Feedback request,Is there any way to find out why Copperleaf said no?,Rejected,Senior Operator,Copperleaf
+E226,2026-10-14 15:46,Alex Khan,alexkhan@example.com,Any news?,"Hi team, any news from Kestrel Labs? Happy to wait, just keen to know where I stand.",Interviewing,Marketing,Kestrel Labs
+E227,2026-10-14 15:46,Zac Thorne,zacthorne@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Sales,
+E228,2026-10-14 15:48,Owen Banks,owen.banks@example.com,Delete my account,Please delete my account and data.,Onboarded,Senior Operator,
+E229,2026-10-14 16:00,Elena Rossi,elena.rossi@example.com,Relocation,I'm moving to London from Milan in January. Can I start interviewing now?,Applied,Marketing,
+E230,2026-10-14 16:02,Tia Akhtar,tiaakhtar@example.com,Re: Jumpstart newsletter,Could you do one on negotiating offers?,Onboarded,Sales,
+E231,2026-10-14 16:09,Ashley Shah,ashley.shah@example.com,Application status,When will I hear back about joining Jumpstart?,Applied,Generalist,
+E232,2026-10-14 16:14,Malik Osei,malikosei@example.com,Re: Interview update,"Hi, following up again on Pinecart. Still nothing.",Interviewing,Generalist,Pinecart
+E233,2026-10-14 16:21,Maddie Parry,maddieparry@example.com,Update on my application,Just checking in on Quillstack. It's been 9 days since my interview.,Interviewing,Sales,Quillstack
+E234,2026-10-14 16:32,Alfie Andrews,alfie.andrews18@example.com,Phone number,Can I add a phone number to my profile?,Onboarded,Senior Operator,
+E235,2026-10-14 16:32,Emeka Foster,emeka.foster@example.com,Thanks!,"Really enjoyed the event last week, thanks!",Hired,Senior Operator,
+E236,2026-10-14 16:35,Jack Robinson,jack.robinson@example.com,Re: Video,"OK, I'll record one. Can I re-record it if I don't like it?",Onboarded,Senior Operator,
+E237,2026-10-14 16:43,Dami Khan,dkhan@example.com,Stop emails,Stop sending me these emails please.,Hired,Generalist,
+E238,2026-10-14 16:47,Billy Cahill,billycahill@example.com,Joining Jumpstart,When will I hear back about joining Jumpstart?,Applied,Senior Operator,
+E239,2026-10-14 16:58,Willow Hill,willow.hill@example.com,Application,Did my application come through? I didn't get a confirmation email.,Applied,Generalist,
+E240,2026-10-14 17:10,Gabe Chandra,gabe.chandra11@example.com,Rejection,Got a no from Quillstack after the second round. Any feedback would really help.,Rejected,Marketing,Quillstack
+E241,2026-10-14 17:10,Lucy Fox,lucy.fox@example.com,Pinecart,"Pinecart offered me a role last week, I resigned from my job on Monday, and today they've told me they're withdrawing the offer because of a 'budget change'. I'm now without a job. What can Jumpstart do?",Offer,Sales,Pinecart
+E242,2026-10-14 17:20,Malik Pike,mpike@example.com,Automatic reply,Out of office. Back Monday.,Onboarded,Sales,
+E243,2026-10-14 17:35,Yusuf Cohen,yusuf.cohen82@example.com,Quick chase,Just checking in on Moorgate AI. It's been 7 days since my interview.,Interviewing,Generalist,Moorgate AI
+E244,2026-10-14 17:40,Reece Dale,reece.dale@example.com,Quick thank you,Just wanted to say the platform is brilliant.,Interviewing,Generalist,
+E245,2026-10-14 17:43,Ashley Young,ashley.young56@example.com,Quick chase,Do you know if Larkspur have made a decision yet? I had my second round last week.,Interviewing,Senior Operator,Larkspur
+E246,2026-10-14 17:46,Luca Jackson,lucajackson@example.com,Interview prep,Pinecart asked for my salary expectations. What should I say?,Interviewing,Marketing,Pinecart
+E247,2026-10-14 17:49,Imogen Nash,imogen.nash59@example.com,Joining Jumpstart,I applied last week. Is there anything else I need to do?,Applied,Generalist,
+E248,2026-10-14 17:50,Cerys Tan,ctan@example.com,Unsubscribe,STOP,Rejected,Marketing,
+E249,2026-10-14 17:52,Joel Mann,jmann@example.com,Interview prep,Should I send a thank-you note after my interview with Fennel Labs?,Interviewing,Marketing,Fennel Labs
+E250,2026-10-14 18:36,Neha Andrews,nehaandrews@example.com,Feedback request,Is there any way to find out why Tallowby said no?,Rejected,Senior Operator,Tallowby
+E251,2026-10-14 18:45,Will Harper,will.harper@example.com,Events,Are you running any in-person events this autumn? I'd love to meet some founders.,Onboarded,Generalist,
+E252,2026-10-14 18:46,Imogen Kaur,ikaur@example.com,Phone number,Can I add a phone number to my profile?,Onboarded,Marketing,
+E253,2026-10-14 18:46,Abby Hayes,abbyhayes@example.com,Question,Is Jumpstart free for candidates?,Onboarded,Sales,
+E254,2026-10-14 18:55,Ellie Andrews,ellieandrews@example.com,Quick question about the video,Is the video compulsory?,Onboarded,Marketing,
+E255,2026-10-14 18:58,Kai Kaur,kaikaur@example.com,Profile photo,How do I change my profile photo?,Onboarded,Senior Operator,
+E256,2026-10-14 19:11,Milo Allen,milo.allen@example.com,Update on my application,Just checking in on Kestrel Labs. It's been 10 days since my interview.,Interviewing,Sales,Kestrel Labs
+E257,2026-10-14 19:28,Gabe Rowe,gabe.rowe@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Generalist,
+E258,2026-10-14 19:41,Amy Foster,amy.foster73@example.com,Any news?,Just checking in on Kestrel Labs. It's been 8 days since my interview.,Interviewing,Generalist,Kestrel Labs
+E259,2026-10-14 19:43,Luca Shah,luca.shah@example.com,Re: Status update,"Hi, following up again on Juniper Loop. Still nothing.",Interviewing,Sales,Juniper Loop
+E260,2026-10-14 19:44,Esme Moore,emoore@example.com,Quick question,Is Jumpstart free for candidates?,Onboarded,Sales,
+E261,2026-10-14 19:48,Caleb Swift,caleb.swift8@example.com,Did you get my application?,"Hi, can you confirm you received my application?",Applied,Sales,
+E262,2026-10-14 19:51,Kiran Jackson,kjackson@example.com,Quick question,Can I apply to more than one role at a startup?,Onboarded,Sales,
+E263,2026-10-14 19:54,Milo Barker,milobarker@example.com,Quick question,Do I need the right to work in the UK?,Applied,Senior Operator,
+E264,2026-10-14 21:02,Kiran Osei,kiran.osei@example.com,Joining Jumpstart,My application still says 'under review'. Is that normal?,Applied,Senior Operator,
+E265,2026-10-14 21:21,Erin Clarke,eclarke@example.com,Feedback request,Got a no from Moorgate AI after the final round. Any feedback would really help.,Rejected,Senior Operator,Moorgate AI
+E266,2026-10-14 21:30,Joseph Nkemelu,joseph.nkemelu@example.com,Video upload,Video upload just spins forever.,Onboarded,Sales,
+E267,2026-10-14 21:43,Jas Kelly,jas.kelly52@example.com,Update on my application,"Hi team, any news from Fennel Labs? Happy to wait, just keen to know where I stand.",Interviewing,Generalist,Fennel Labs
+E268,2026-10-14 21:50,Billy Nash,billy.nash75@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Sales,
+E269,2026-10-14 22:23,Pia Gill,piagill@example.com,Password,How do I reset my login? The link has expired.,Onboarded,Senior Operator,
+E270,2026-10-14 22:29,Carlos Dawson,carlosdawson@example.com,Can't upload video,Error 500 when I upload my video.,Onboarded,Senior Operator,
+E271,2026-10-14 22:40,Chen Shaw,chenshaw@example.com,Update on my application,"Hi, I interviewed with Nimbleway last Friday and haven't heard back. Any update?",Interviewing,Generalist,Nimbleway
+E272,2026-10-14 22:49,Alex Osei,alex.osei34@example.com,Automatic reply: Your weekly roles,Thanks for your message. I'm on annual leave and will reply on my return.,Hired,Sales,
+E273,2026-10-14 23:14,Jas Kim,jas.kim@example.com,Video not working,Video upload isn't working.,Onboarded,Marketing,
+E274,2026-10-14 23:36,Umar Kim,umar.kim29@example.com,Problem with video,Upload fails at 50% every time.,Onboarded,Generalist,
+E275,2026-10-15 01:21,Anya Jones,ajones10@example.com,Problem with video,Video upload isn't working.,Onboarded,Marketing,
+E276,2026-10-15 01:24,Rosa Dale,rosa.dale45@example.com,Problem with video,Upload fails at 50% every time.,Onboarded,Senior Operator,
+E277,2026-10-15 01:28,Anna Iqbal,anna.iqbal@example.com,Problem with video,The video page won't load.,Onboarded,Marketing,
+E278,2026-10-15 01:37,Tia Swift,tswift@example.com,Re: Update on my application,Second time asking about Fennel Labs. Could someone take a look?,Interviewing,Generalist,Fennel Labs
+E279,2026-10-15 02:13,Bella Dale,belladale@example.com,Video upload,"Upload keeps failing, tried a few times.",Onboarded,Generalist,
+E280,2026-10-15 04:43,Darcy Kim,dkim@example.com,Upload error,"Upload keeps failing, tried a few times.",Onboarded,Generalist,
+E281,2026-10-15 04:59,Saffi Gray,saffi.gray57@example.com,Problem with video,"Upload keeps failing, tried a few times.",Onboarded,Senior Operator,
+E282,2026-10-15 06:22,Kai Bose,kbose@example.com,Problem with video,Video upload isn't working.,Onboarded,Marketing,
+E283,2026-10-15 07:48,Seb Marsh,smarsh@example.com,Any news?,"Sorry to bother you, is there any update from Brindle AI?",Interviewing,Generalist,Brindle AI
+E284,2026-10-15 08:01,Yusuf West,ywest@example.com,Video not working,"Upload keeps failing, tried a few times.",Onboarded,Senior Operator,
+E285,2026-10-15 08:05,Grace Lin,grace.lin@example.com,Upload broken?,Is the video upload down? Tried 5 times this morning.,Onboarded,Marketing,
+E286,2026-10-15 08:18,Adele Burke,aburke@example.com,Rejection,Is there any way to find out why Fennel Labs said no?,Rejected,Generalist,Fennel Labs
+E287,2026-10-15 08:20,Adam Price,adam.price@example.com,Video,Can't upload my intro video. Error 500.,Onboarded,Generalist,
+E288,2026-10-15 08:22,Nathan Marsh,nathan.marsh37@example.com,Video upload,Is the site down? My video won't upload.,Onboarded,Generalist,
+E289,2026-10-15 08:22,Finn Akhtar,finn.akhtar51@example.com,Profile photo,How do I change my profile photo?,Onboarded,Sales,
+E290,2026-10-15 08:41,Holly Sanders,holly.sanders@example.com,Upload error,"It keeps saying 'Upload failed, please try again later'. It's been like that all morning.",Onboarded,Sales,
+E291,2026-10-15 08:59,Billy Shah,billyshah@example.com,Upload error,"Upload keeps failing, tried a few times.",Onboarded,Marketing,
+E292,2026-10-15 09:02,Reece Bose,rbose@example.com,Application status,My application still says 'under review'. Is that normal?,Applied,Marketing,
+E293,2026-10-15 09:02,Noah Fisher,noah.fisher@example.com,Video page not loading,The record video page is just blank for me.,Onboarded,Senior Operator,
+E294,2026-10-15 09:06,Evan Boyd,eboyd@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Marketing,
+E295,2026-10-15 09:22,Reece Ng,reece.ng66@example.com,Video not working,"Upload keeps failing, tried a few times.",Onboarded,Sales,
+E296,2026-10-15 09:28,Femi Obi,femi.obi42@example.com,Quick question,I'm relocating to London next year. Can I join now?,Onboarded,Senior Operator,
+E297,2026-10-15 09:30,Aisha Rahman,aisha.rahman@example.com,Re: Driftwell interview,I'm going to post about this on LinkedIn if I don't hear anything. It's been three weeks.,Interviewing,Generalist,Driftwell
+E298,2026-10-15 09:43,Eli Obi,eliobi@example.com,Video not working,The video page won't load.,Onboarded,Marketing,
+E299,2026-10-15 09:55,Rahul Mehta,rahul.mehta@example.com,Interview update,Any news from Brindle AI after Tuesday's interview?,Interviewing,Sales,Brindle AI
+E300,2026-10-15 10:11,Pia Cahill,piacahill@example.com,Interview update,"Hi team, any news from Quillstack? Happy to wait, just keen to know where I stand.",Interviewing,Generalist,Quillstack
+E301,2026-10-15 10:20,Emily Shaw,emily.shaw@example.com,Video upload,Video upload isn't working for me either. My friend said hers isn't working too.,Onboarded,Marketing,
+E302,2026-10-15 10:35,Willow Moore,willow.moore@example.com,Change my email,Can you update my email address to a new one? I'm losing access to this one.,Onboarded,Senior Operator,
+E303,2026-10-15 10:42,Evan Wade,evan.wade40@example.com,Did you get my application?,Did my application come through? I didn't get a confirmation email.,Applied,Sales,
+E304,2026-10-15 10:44,Kai Page,kaipage@example.com,Question,Can I apply to more than one role at a startup?,Onboarded,Marketing,
+E305,2026-10-15 10:45,Clara Dean,clara.dean@example.com,Automatic reply,I'm away until Monday 26 October.,Onboarded,Marketing,
+E306,2026-10-15 11:10,Chris Doyle,chris.doyle@example.com,Subject access request,"Under GDPR I'd like a copy of all the personal data Jumpstart holds about me, including any notes your team has made about me.",Rejected,Generalist,
+E307,2026-10-15 11:35,Ruth Adeyemi,ruth.adeyemi@example.com,Feedback please,"Hi, I'd love feedback on my Fennel Labs application. I didn't get past the first stage.",Rejected,Marketing,Fennel Labs
+E308,2026-10-15 11:44,Vik Shah,vik.shah@example.com,Re: Jumpstart newsletter,The founder interview was brilliant.,Onboarded,Sales,
+E309,2026-10-15 12:00,Sam Gill,sam.gill@example.com,STOP,STOP,Onboarded,Sales,
+E310,2026-10-15 12:15,Quinn Dunne,quinn.dunne87@example.com,Out of office,I'm out of the office until 26 October with limited access to email.,Hired,Sales,
+E311,2026-10-15 12:16,Jess Young,jess.young75@example.com,Quick chase,Do you know if Fennel Labs have made a decision yet? I had my final round two weeks ago.,Interviewing,Marketing,Fennel Labs
+E312,2026-10-15 12:25,Harry Reid,harry.reid10@example.com,Video upload,Video upload isn't working.,Onboarded,Senior Operator,
+E313,2026-10-15 12:25,Olivia Brooks,olivia.brooks@example.com,Matches not relevant,All my matches are for £30k roles but I'm looking for £55k+. Can I set a minimum salary?,Onboarded,Senior Operator,
+E314,2026-10-15 12:33,Efe Taylor,efetaylor@example.com,Quick question about the video,Can I upload a video from my phone?,Onboarded,Sales,
+E315,2026-10-15 12:47,Iman Hunt,iman.hunt@example.com,Problem with video,Is the site down? My video won't upload.,Onboarded,Senior Operator,
+E316,2026-10-15 12:50,Daniel Okafor,daniel.okafor@example.com,Re: Video won't upload,Third email about this. Is anyone reading these?,Onboarded,Sales,
+E317,2026-10-15 12:54,Abby Doherty,adoherty@example.com,Unsubscribe,STOP,Onboarded,Senior Operator,
+E318,2026-10-15 13:01,Kemi Gordon,kemigordon@example.com,Automatic reply: Your weekly roles,I'm currently travelling with limited access to email.,Hired,Generalist,
+E319,2026-10-15 13:02,Ivy Lowe,ivy.lowe44@example.com,Profile photo,How do I change my profile photo?,Onboarded,Generalist,
+E320,2026-10-15 13:14,Toby Bailey,tobybailey@example.com,Problem with video,"Upload keeps failing, tried a few times.",Onboarded,Marketing,
+E321,2026-10-15 13:15,Kieran Byrne,kieran.byrne@example.com,Startup didn't turn up,I logged on to my Quillstack interview at 1pm and nobody joined. I waited 20 minutes. Nobody has replied to my email.,Interviewing,Sales,Quillstack
+E322,2026-10-15 13:31,Jas Jackson,jas.jackson@example.com,Unsubscribe,Stop sending me these emails please.,Rejected,Generalist,
+E323,2026-10-15 13:37,Umar Brennan,umar.brennan@example.com,Re: Your weekly roles,Most of my matches aren't relevant to my stream.,Onboarded,Generalist,
+E324,2026-10-15 13:40,Amber Collins,amber.collins@example.com,Interview update,"Hi, I had an interview with Driftwell last Friday. Any idea when I'll hear?",Interviewing,Marketing,Driftwell
+E325,2026-10-15 13:53,Conor Marsh,cmarsh@example.com,Automatic reply: New matches,I'm currently travelling with limited access to email.,Onboarded,Senior Operator,
+E326,2026-10-15 14:05,Patrick O'Neill,patrick.oneill@example.com,Got the job at Saltmarsh!,"Great news, Saltmarsh offered me the Ops Associate role and I've accepted. I start on 26 October.",Hired,Generalist,Saltmarsh
+E327,2026-10-15 14:06,Caleb Burke,cburke@example.com,Automatic reply,I'm out of the office until next week with limited access to email.,Onboarded,Senior Operator,
+E328,2026-10-15 14:13,Amir Osei,amir.osei14@example.com,Upload error,Video upload isn't working.,Onboarded,Sales,
+E329,2026-10-15 14:21,Omar Chandra,omar.chandra1@example.com,Advice please,How many interviews do startups usually do?,Interviewing,Marketing,Quillstack
+E330,2026-10-15 14:30,Freya Hughes,freya.hughes@example.com,Re: Salary question,Thanks. Another question: they've asked for 2 references before the next round. Is that normal?,Interviewing,Sales,Pinecart
+E331,2026-10-15 14:55,Lewis Grant,lewis.grant@example.com,Delete my data,"Please remove my profile, I'm no longer looking.",Onboarded,Generalist,
+E332,2026-10-15 15:01,Conor Clarke,conor.clarke@example.com,Application status,My application still says 'under review'. Is that normal?,Applied,Generalist,
+E333,2026-10-15 15:03,Priya (UniCareers),priya@unicareers.example.com,Careers fair,Would Jumpstart like a stand at our careers fair next month?,Not a candidate,,
+E334,2026-10-15 15:05,Raj Walsh,rajwalsh@example.com,My application,"Hi, I applied 10 days ago and haven't heard anything. How long does it take?",Applied,Marketing,
+E335,2026-10-15 15:06,Kasia Kaur,kasia.kaur@example.com,Status update,Do you know if Nimbleway have made a decision yet? I had my first round last week.,Interviewing,Sales,Nimbleway
+E336,2026-10-15 15:20,Tasha Green,tasha.green@example.com,Video,Upload still broken.,Onboarded,Sales,
+E337,2026-10-15 15:27,Sana Dale,sdale@example.com,Automatic reply: Your weekly roles,I'm currently travelling with limited access to email.,Onboarded,Senior Operator,
+E338,2026-10-15 15:45,Hassan Raza,hassan.raza@example.com,Accessibility,"I'm dyslexic and found the written application questions hard. Is there another way to apply, e.g. a call?",Applied,Generalist,
+E339,2026-10-15 16:01,Mark (SEOBoost),mark@seoboost.example.com,Grow your traffic,We can double your website traffic in 30 days.,Not a candidate,,
+E340,2026-10-15 16:10,Ella Morgan,ella.morgan@example.com,Re: Thank you!,PS Fennel Labs asked me to send my right to work documents to you. Is that right?,Hired,Marketing,Fennel Labs
+E341,2026-10-15 16:19,Yusuf Taylor,yusuf.taylor@example.com,Rejection,I was rejected by Kestrel Labs. Could I get any feedback?,Rejected,Senior Operator,Kestrel Labs
+E342,2026-10-15 16:25,Nia Dawson,nia.dawson@example.com,Re: Jumpstart newsletter,Could you do one on negotiating offers?,Onboarded,Generalist,
+E343,2026-10-15 16:37,Kasia Chu,kchu@example.com,Automatic reply,Out of office. Back next week.,Hired,Marketing,
+E344,2026-10-15 16:58,Zoe West,zoewest@example.com,Interview update,Just checking in on Pinecart. It's been 8 days since my interview.,Interviewing,Senior Operator,Pinecart
+E345,2026-10-15 17:00,Raj Jones,rajjones@example.com,Thank you,"Really enjoyed the event last week, thanks!",Onboarded,Senior Operator,
+E346,2026-10-15 17:00,Aaron Murphy,aaronmurphy@example.com,Roles,Most of my matches aren't relevant to my stream.,Onboarded,Marketing,
+E347,2026-10-15 17:30,Victoria Hale,victoria.hale@example.com,Application status,I applied 18 days ago and it still says 'under review'.,Applied,Marketing,
+E348,2026-10-15 17:50,Callie Wong,calliewong@example.com,Automatic reply: New matches,I'm out of the office until Wednesday with limited access to email.,Hired,Marketing,
+E349,2026-10-15 17:54,Gabe Thorne,gabe.thorne@example.com,Thank you,"Thanks for the intro, the interview went well.",Interviewing,Senior Operator,
+E350,2026-10-15 18:00,Ahmed Swift,aswift@example.com,Update on my application,Just checking in on Nimbleway. It's been 12 days since my interview.,Interviewing,Generalist,Nimbleway
+E351,2026-10-15 18:10,Ryan Cole,ryan.cole@example.com,Formal complaint - harassment,I unsubscribed from your emails a month ago and I'm still getting them. If I receive one more I will be reporting Jumpstart to the ICO.,Hired,Sales,
+E352,2026-10-15 18:11,Vik Khan,vik.khan@example.com,Quick question about the video,What should I talk about in my intro video?,Onboarded,Marketing,
+E353,2026-10-15 18:14,Caleb Tan,caleb.tan@example.com,Application,Did my application come through? I didn't get a confirmation email.,Applied,Generalist,
+E354,2026-10-15 18:24,Simran Swift,simran.swift89@example.com,Hi,How does the matching work?,Applied,Generalist,
+E355,2026-10-15 18:29,Dami Dale,dami.dale@example.com,Any news?,"Sorry to bother you, is there any update from Nimbleway?",Interviewing,Generalist,Nimbleway
+E356,2026-10-15 18:34,Aaron Foster,aaron.foster27@example.com,Automatic reply: Your weekly roles,Out of office. Back next week.,Onboarded,Sales,
+E357,2026-10-15 18:43,Ashley Young,ashley.young56@example.com,Re: Quick chase,"Hi, following up again on Larkspur. Still nothing.",Interviewing,Senior Operator,Larkspur
+E358,2026-10-15 18:54,Hamza Swift,hamza.swift@example.com,Joining Jumpstart,I applied last week. Is there anything else I need to do?,Applied,Marketing,
+E359,2026-10-15 19:00,Matt Jenkins,matt.jenkins@example.com,Jumpstart newsletter,"Loved this week's newsletter, the salary guide was really useful!",Onboarded,Generalist,
+E360,2026-10-15 19:20,Anna Osei,aosei@example.com,Any feedback?,Is there any way to find out why Tidewater said no?,Rejected,Sales,Tidewater
+E361,2026-10-15 19:32,Theo Hayes,theohayes@example.com,Update on my application,Just checking in on Juniper Loop. It's been 9 days since my interview.,Interviewing,Sales,Juniper Loop
+E362,2026-10-15 21:23,Eddie Iqbal,eddieiqbal@example.com,Re: Any news?,Still no news from Larkspur. Should I assume it's a no?,Interviewing,Sales,Larkspur
+E363,2026-10-15 21:23,Kemi Jones,kjones@example.com,Update my CV,How do I upload a new version of my CV?,Onboarded,Marketing,
+E364,2026-10-15 22:05,Mei Chen,mei.chen@example.com,Reference request,"Copperleaf have asked for a reference from my last manager, but I was made redundant and we didn't part on good terms. What should I do?",Interviewing,Senior Operator,Copperleaf
+E365,2026-10-15 22:22,Kai Gray,kai.gray@example.com,Application status,When will I hear back about joining Jumpstart?,Applied,Marketing,
+E366,2026-10-16 04:40,Chen Shaw,chenshaw@example.com,Re: Update on my application,"Hi, following up again on Nimbleway. Still nothing.",Interviewing,Generalist,Nimbleway
+E367,2026-10-16 07:51,Iman Cohen,iman.cohen96@example.com,Suggestion,Can I see roles that offer visa sponsorship?,Onboarded,Sales,
+E368,2026-10-16 08:10,Oliver Grant,oliver.grant@example.com,Re: Quillstack offer,"Hi, Brindle have now moved my final to next Friday. Quillstack still want an answer on Monday. Could someone give me a call? 07700 900123.",Offer,Sales,Quillstack; Brindle AI
+E369,2026-10-16 08:45,Marco Silva,marco.silva@example.com,Automatic reply,Out of office. Back Tuesday.,Onboarded,Sales,
+E370,2026-10-16 09:01,Nadia Knight,nadiaknight@example.com,Advice please,Any tips for my first interview with Moorgate AI?,Interviewing,Marketing,Moorgate AI
+E371,2026-10-16 09:02,Faye Gordon,fayegordon@example.com,Quick chase,Just checking in on Copperleaf. It's been 14 days since my interview.,Interviewing,Marketing,Copperleaf
+E372,2026-10-16 09:07,Erin Khan,erin.khan@example.com,Pause account,Can I pause my profile for a few weeks?,Onboarded,Marketing,
+E373,2026-10-16 09:15,Sophie Patel,sophie.patel@example.com,Interview update,"Hi, any news from Harbourlight? I interviewed 2 weeks ago.",Interviewing,Marketing,Harbourlight
+E374,2026-10-16 09:40,Jamie Lowe,jamie.lowe@example.com,Feedback,I was rejected by Copperleaf and would appreciate any feedback.,Rejected,Sales,Copperleaf
+E375,2026-10-16 09:41,Kasia Reid,kreid@example.com,Joining Jumpstart,"Hi, can you confirm you received my application?",Applied,Sales,
+E376,2026-10-16 09:52,Clara Singh,clara.singh@example.com,Unsubscribe,Please unsubscribe me.,Hired,Sales,
+E377,2026-10-16 09:54,Anna Akhtar,annaakhtar@example.com,Roles,Can I filter roles by location? I'm based in Bristol.,Onboarded,Senior Operator,
+E378,2026-10-16 09:55,Gemma Murphy,gemmamurphy@example.com,Any news?,"Hi team, any news from Brindle AI? Happy to wait, just keen to know where I stand.",Interviewing,Marketing,Brindle AI
+E379,2026-10-16 10:05,Ben Carter,ben.carter@example.com,Re: Interview confirmed - Harbourlight,"The interview went ahead in the end (they'd just hidden the listing). All good, thanks!",Interviewing,Sales,Harbourlight
+E380,2026-10-16 10:30,Abigail Ross,abigail.ross@example.com,Is my video OK?,I uploaded my video yesterday. Can someone check it saved? I can't see it on my profile.,Onboarded,Generalist,
+E381,2026-10-16 10:47,Alex Dunne,alexdunne@example.com,Change stream,Can I switch to a different stream?,Onboarded,Sales,
+E382,2026-10-16 10:55,Nathan Price,nathan.price@example.com,Re: Your weekly roles,I'm interested in the Brindle AI role but the apply button doesn't work on mobile.,Onboarded,Sales,Brindle AI
+E383,2026-10-16 11:00,Amy Chu,amy.chu@example.com,Quick question about the video,Is the video compulsory?,Onboarded,Generalist,
+E384,2026-10-16 11:20,Yasmin Hall,yasmin.hall@example.com,Driftwell,"Hi, I've been ghosted by Driftwell after the final round. It's not the first time I've heard this about them from friends on Jumpstart.",Interviewing,Generalist,Driftwell
+E385,2026-10-16 11:21,Liam West,liam.west31@example.com,Any news?,Just checking in on Pinecart. It's been 14 days since my interview.,Interviewing,Senior Operator,Pinecart
+E386,2026-10-16 11:24,Chen Murphy,cmurphy@example.com,Re: Interview update,Still no news from Juniper Loop. Should I assume it's a no?,Interviewing,Generalist,Juniper Loop
+E387,2026-10-16 11:45,Peter Novak,peter.novak@example.com,Visa,Do I need the right to work in the UK to join?,Applied,Generalist,
+E388,2026-10-16 11:57,Sofia Rowe,sofia.rowe16@example.com,Quick question about the video,Can I re-record my video?,Onboarded,Sales,
+E389,2026-10-16 12:03,Ahmed Young,ahmedyoung@example.com,Thank you,"Really enjoyed the event last week, thanks!",Interviewing,Generalist,
+E390,2026-10-16 12:10,Laura Bishop,laura.bishop@example.com,Interview update,Following up on Pinecart. It's been a week since my final.,Interviewing,Senior Operator,Pinecart
+E391,2026-10-16 12:13,Maddie Rao,maddie.rao@example.com,Stop emails,Stop sending me these emails please.,Hired,Senior Operator,
+E392,2026-10-16 12:34,Reece Shah,reece.shah@example.com,Suggestion,The apply button doesn't work on my phone.,Onboarded,Senior Operator,
+E393,2026-10-16 12:35,Rory Dunn,rory.dunn@example.com,unsubscribe,please unsubscribe,Rejected,Sales,
+E394,2026-10-16 12:36,Orla Kaur,orla.kaur95@example.com,Quick question,Can I be in two streams at once?,Applied,Sales,
+E395,2026-10-16 12:37,Kara Akhtar,kara.akhtar12@example.com,Status update,Do you know if Larkspur have made a decision yet? I had my final round 10 days ago.,Interviewing,Generalist,Larkspur
+E396,2026-10-16 12:43,Orla Kim,okim@example.com,Headline,How do I edit my profile headline?,Onboarded,Marketing,
+E397,2026-10-16 12:46,Maya Rao,mrao@example.com,Profile photo,How do I change my profile photo?,Onboarded,Marketing,
+E398,2026-10-16 12:49,Hamza Banks,hbanks@example.com,STOP,STOP,Hired,Generalist,
+E399,2026-10-16 12:57,Omar Moore,omoore@example.com,Automatic reply,I'm out of the office until 26 October with limited access to email.,Hired,Sales,
+E400,2026-10-16 13:00,Sara Lindqvist,sara.lindqvist@example.com,Re: Saltmarsh interview,"Hi, no worries if you're busy. I mentioned it to a friend who interviewed there last month and she said she got asked the same thing. Should I say something to them?",Interviewing,Generalist,Saltmarsh
+E401,2026-10-16 13:01,Alfie Page,alfiepage@example.com,Suggestion,Could you add remote-only roles as a filter?,Onboarded,Senior Operator,
+E402,2026-10-16 13:13,Nia Chu,nia.chu35@example.com,Automatic reply: New matches,I'm out of the office until 26 October with limited access to email.,Hired,Sales,
+E403,2026-10-16 13:25,Ollie Brennan,ollie.brennan@example.com,Profile photo,How do I change my profile photo?,Onboarded,Marketing,
+E404,2026-10-16 13:40,Abby Barker,abbybarker@example.com,Matches,Can I see roles that offer visa sponsorship?,Onboarded,Generalist,
+E405,2026-10-16 13:40,George Jackson,georgejackson@example.com,Enquiry,Can I refer a friend?,Applied,Generalist,
+E406,2026-10-16 13:46,Jonah Osei,josei@example.com,Application status,My application still says 'under review'. Is that normal?,Applied,Marketing,
+E407,2026-10-16 13:50,Hollie Chapman,hollie.chapman@example.com,Notice period,Fennel Labs want me to start in 2 weeks but I have a 1-month notice period. How should I handle this?,Offer,Marketing,Fennel Labs
+E408,2026-10-16 13:59,Ashley Lamb,ashley.lamb45@example.com,Re: Update on my application,"Hi, following up again on Moorgate AI. Still nothing.",Interviewing,Sales,Moorgate AI
+E409,2026-10-16 14:04,Chen Hart,chen.hart62@example.com,My application,Did my application come through? I didn't get a confirmation email.,Applied,Marketing,
+E410,2026-10-16 14:06,Flora Kaur,flora.kaur94@example.com,Any feedback?,I was rejected by Brindle AI. Could I get any feedback?,Rejected,Senior Operator,Brindle AI
+E411,2026-10-16 14:15,Dan Hughes (CareersWeek),dan@careersweek.example.com,Speaking opportunity,We'd love a Jumpstart speaker at our student careers fair on 12 November. Are you interested?,Not a candidate,,
+E412,2026-10-16 14:40,Mia Johnson,mia.johnson@example.com,Re: Video upload stuck,It worked when I compressed the file. Thanks anyway.,Onboarded,Sales,
+E413,2026-10-16 14:48,Esme Swift,esmeswift@example.com,Quick chase,"Hi team, any news from Fennel Labs? Happy to wait, just keen to know where I stand.",Interviewing,Sales,Fennel Labs
+E414,2026-10-16 15:05,Connor Walsh,connor.walsh@example.com,Application status,"Hi, I applied on Monday. When will I hear back?",Applied,Sales,
+E415,2026-10-16 15:30,Priya Shah,priya.shah@example.com,Re: Any update on Copperleaf?,Copperleaf just emailed. I got it!! Thank you!,Offer,Sales,Copperleaf
+E416,2026-10-16 15:34,Chen Ward,chenward@example.com,Out of office,Thanks for your message. I'm on annual leave and will reply on my return.,Hired,Generalist,
+E417,2026-10-16 15:48,Kasia Wood,kasiawood@example.com,Pause account,Can I pause my profile for a few weeks?,Onboarded,Sales,
+E418,2026-10-16 15:50,Kemi Lowe,klowe@example.com,Feedback on the platform,Is there a way to set a minimum salary?,Onboarded,Generalist,
+E419,2026-10-16 16:01,Kai Brennan,kai.brennan@example.com,Application status,Did my application come through? I didn't get a confirmation email.,Applied,Senior Operator,
+E420,2026-10-16 16:10,Kate Morris,kate.morris@example.com,Bad experience,"The platform is great, but I've applied to 15 roles and only heard back from 2. Do startups actually look at applications?",Onboarded,Generalist,
+E421,2026-10-16 16:11,Kara Page,kara.page88@example.com,Feedback request,Got a no from Juniper Loop after the final round. Any feedback would really help.,Rejected,Generalist,Juniper Loop
+E422,2026-10-16 16:20,Nadia Abbott,nadia.abbott39@example.com,Quick chase,Just checking in on Larkspur. It's been 13 days since my interview.,Interviewing,Generalist,Larkspur
+E423,2026-10-16 16:30,Hattie Abbott,hattie.abbott@example.com,Quick question,Can I apply to more than one role at a startup?,Applied,Marketing,
+E424,2026-10-16 16:31,Eli Dale,eli.dale92@example.com,Automatic reply: Your weekly roles,Out of office. Back Wednesday.,Hired,Generalist,
+E425,2026-10-16 16:46,Alex Khan,alexkhan@example.com,Re: Any news?,"Hi, following up again on Kestrel Labs. Still nothing.",Interviewing,Marketing,Kestrel Labs
+E426,2026-10-16 17:05,Omar Young,omar.young@example.com,Stop emails,unsubscribe,Hired,Marketing,
+E427,2026-10-16 17:11,Nadia Singh,nadia.singh38@example.com,Any feedback?,Is there any way to find out why Moorgate AI said no?,Rejected,Generalist,Moorgate AI
+E428,2026-10-16 17:22,Bella Iqbal,bella.iqbal@example.com,Out of office,Out of office. Back Wednesday.,Onboarded,Sales,
+E429,2026-10-16 17:40,Isaac Andrews,isaacandrews@example.com,Advice please,How many interviews do startups usually do?,Interviewing,Marketing,Moorgate AI
+E430,2026-10-16 17:45,Beth Young,beth.young@example.com,Automatic reply,I'm on parental leave until January.,Hired,Marketing,
+E431,2026-10-16 17:54,Gabe Mason,gabe.mason@example.com,Thank you,Thanks so much for your help this week!,Onboarded,Marketing,
+E432,2026-10-16 18:58,Femi Ahmed,femiahmed@example.com,unsubscribe,STOP,Rejected,Sales,
+E433,2026-10-16 19:09,Jake Lane,jakelane@example.com,Status update,"Hi, I interviewed with Pinecart on Tuesday and haven't heard back. Any update?",Interviewing,Senior Operator,Pinecart
+E434,2026-10-16 19:23,Umar Nash,umarnash@example.com,Joining Jumpstart,I applied last week. Is there anything else I need to do?,Applied,Generalist,
+E435,2026-10-16 20:06,Esme Shaw,esme.shaw@example.com,Unsubscribe,STOP,Onboarded,Senior Operator,
+E436,2026-10-16 21:05,Jake Quinn,jake.quinn@example.com,Re: Interview update,"Hi team, any news from Brindle AI? Happy to wait, just keen to know where I stand.",Interviewing,Generalist,Brindle AI
+E437,2026-10-16 21:51,Theo Holt,theo.holt@example.com,Change stream,Can I switch to a different stream?,Onboarded,Senior Operator,
+E438,2026-10-16 21:57,Layla Marsh,layla.marsh@example.com,Re: Jumpstart newsletter,The founder interview was brilliant.,Onboarded,Generalist,
+E439,2026-10-16 22:29,Maya Cohen,mayacohen@example.com,ASAP please,How do I add a second language to my profile?,Onboarded,Sales,
+E440,2026-10-16 22:33,Willow Ellis,willowellis@example.com,Re: Interview update,Just checking in on Quillstack. It's been 10 days since my interview.,Interviewing,Senior Operator,Quillstack
+E441,2026-10-16 23:32,Theo Hayes,theohayes@example.com,Re: Update on my application,Second time asking about Juniper Loop. Could someone take a look?,Interviewing,Sales,Juniper Loop
+E442,2026-10-17 00:00,Ahmed Swift,aswift@example.com,Re: Update on my application,Second time asking about Nimbleway. Could someone take a look?,Interviewing,Generalist,Nimbleway
+E443,2026-10-17 00:41,Amy Foster,amy.foster73@example.com,Re: Any news?,Still no news from Kestrel Labs. Should I assume it's a no?,Interviewing,Generalist,Kestrel Labs
+E444,2026-10-17 01:23,Eddie Iqbal,eddieiqbal@example.com,Re: Any news?,Still no news from Larkspur. Should I assume it's a no?,Interviewing,Sales,Larkspur
+E445,2026-10-17 08:24,Zoe Reid,zoe.reid@example.com,Video question,Is the video compulsory?,Onboarded,Senior Operator,
+E446,2026-10-17 09:15,Aisha Rahman,aisha.r.personal@example.com,Driftwell - fourth time,"Emailing from my personal address in case my other emails are going to spam. Still nothing from Driftwell, or from you.",Interviewing,Generalist,Driftwell
+E447,2026-10-17 09:28,Jess Stone,jessstone@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Generalist,
+E448,2026-10-17 09:41,Carlos Doherty,carlos.doherty85@example.com,Any feedback?,Is there any way to find out why Juniper Loop said no?,Rejected,Sales,Juniper Loop
+E449,2026-10-17 09:46,Dan Khan,dan.khan@example.com,unsubscribe,Please unsubscribe me.,Hired,Senior Operator,
+E450,2026-10-17 10:05,Dami Kim,dkim8@example.com,Advice please,How many interviews do startups usually do?,Interviewing,Generalist,Tallowby
+E451,2026-10-17 10:20,Luke Barnes,luke.barnes@example.com,Weekend question,Is it OK to apply to more than one role at the same startup?,Onboarded,Sales,
+E452,2026-10-17 10:29,Anya Ward,anyaward@example.com,Application,When will I hear back about joining Jumpstart?,Applied,Senior Operator,
+E453,2026-10-17 10:34,Maya Lane,maya.lane@example.com,Phone number,Can I add a phone number to my profile?,Onboarded,Sales,
+E454,2026-10-17 11:34,Sam (TalentStack),sam@talentstack.example.com,Partnership,We'd love to explore a partnership with Jumpstart. Free for a call?,Not a candidate,,
+E455,2026-10-17 12:05,Ibrahim Yusuf,ibrahim.yusuf@example.com,Re: Driftwell,Driftwell finally replied: rejected. Five weeks after my first interview.,Rejected,Sales,Driftwell
+E456,2026-10-17 12:24,Kai Nash,knash@example.com,Question,Do startups see my video before my CV?,Applied,Senior Operator,
+E457,2026-10-17 12:37,Phoebe Wade,phoebewade@example.com,Status update,"Hi, I interviewed with Nimbleway two weeks ago and haven't heard back. Any update?",Interviewing,Senior Operator,Nimbleway
+E458,2026-10-17 13:20,Seb Gray,sgray@example.com,Did you get my application?,"Hi, can you confirm you received my application?",Applied,Generalist,
+E459,2026-10-17 13:59,Ashley Lamb,ashley.lamb45@example.com,Re: Update on my application,Still no news from Moorgate AI. Should I assume it's a no?,Interviewing,Sales,Moorgate AI
+E460,2026-10-17 14:44,Cara Holt,cara.holt@example.com,Roles,My matches are all for very junior roles.,Onboarded,Generalist,
+E461,2026-10-17 14:48,Pia Reid,preid@example.com,Re: Interview update,"Hi, could you chase Moorgate AI for me? Still waiting after my second round.",Interviewing,Generalist,Moorgate AI
+E462,2026-10-17 14:53,Gemma Dale,gemma.dale@example.com,Intro video,Does my video need to be professional?,Onboarded,Marketing,
+E463,2026-10-17 15:40,Fatima Begum,fatima.begum@example.com,Interview update,Any news from Saltmarsh? I had a first round on Wednesday.,Interviewing,Generalist,Saltmarsh
+E464,2026-10-17 16:55,Liam Hunt,liamhunt@example.com,Out of office,I'm out of the office until Wednesday with limited access to email.,Onboarded,Marketing,
+E465,2026-10-17 17:49,Kemi Shah,kemi.shah@example.com,Following up,Just checking in on Kestrel Labs. It's been 7 days since my interview.,Interviewing,Sales,Kestrel Labs
+E466,2026-10-17 18:26,Molly Murphy,mollymurphy@example.com,Enquiry,Can I be in two streams at once?,Applied,Sales,
+E467,2026-10-17 19:04,Cara Vance,caravance@example.com,Hi,I'm relocating to London next year. Can I join now?,Applied,Sales,
+E468,2026-10-17 19:05,Sofia Kim,sofia.kim27@example.com,Interview update,Do you know if Quillstack have made a decision yet? I had my first round two weeks ago.,Interviewing,Senior Operator,Quillstack
+E469,2026-10-17 19:15,Nadia Farah,nadia.farah@example.com,Unsubscribe,Unsubscribe,Onboarded,Marketing,
+E470,2026-10-17 19:54,George Webb,gwebb@example.com,Joining Jumpstart,When will I hear back about joining Jumpstart?,Applied,Sales,
+E471,2026-10-17 22:21,Kasia Rowe,kasia.rowe77@example.com,Re: Jumpstart newsletter,Could you do one on negotiating offers?,Onboarded,Senior Operator,
+E472,2026-10-17 22:51,Ryan Chandra,rchandra@example.com,Any news?,"Sorry to bother you, is there any update from Fennel Labs?",Interviewing,Generalist,Fennel Labs
+E473,2026-10-18 00:00,Ahmed Swift,aswift@example.com,Re: Update on my application,Second time asking about Nimbleway. Could someone take a look?,Interviewing,Generalist,Nimbleway
+E474,2026-10-18 07:40,Chen Shaw,chenshaw@example.com,Re: Update on my application,Second time asking about Nimbleway. Could someone take a look?,Interviewing,Generalist,Nimbleway
+E475,2026-10-18 09:01,Quinn Mann,quinnmann@example.com,LinkedIn link,My LinkedIn link on my profile is broken. Can you fix it?,Onboarded,Sales,
+E476,2026-10-18 09:30,Georgia Price,georgia.price@example.com,Offer letter questions,Brindle AI sent my offer letter. It says equity is 'at the board's discretion'. Is that normal? I need to sign by Tuesday.,Offer,Generalist,Brindle AI
+E477,2026-10-18 09:37,Isaac Young,isaacyoung@example.com,Application,"Hi, I applied 10 days ago and haven't heard anything. How long does it take?",Applied,Senior Operator,
+E478,2026-10-18 09:42,Amir Parry,amir.parry68@example.com,Feedback on the platform,Can I see roles that offer visa sponsorship?,Onboarded,Generalist,
+E479,2026-10-18 09:49,Flora Osei,floraosei@example.com,Re: Your weekly roles,Can I filter roles by location? I'm based in Bristol.,Onboarded,Sales,
+E480,2026-10-18 10:51,Orla Singh,orla.singh@example.com,Out of office,I'm out of the office until Wednesday with limited access to email.,Hired,Senior Operator,
+E481,2026-10-18 11:19,Sam Wood,sam.wood89@example.com,Profile photo,How do I change my profile photo?,Onboarded,Senior Operator,
+E482,2026-10-18 11:44,Jess Wu,jwu@example.com,Application,Did my application come through? I didn't get a confirmation email.,Applied,Senior Operator,
+E483,2026-10-18 12:50,Chen Wood,chen.wood@example.com,Automatic reply: New matches,I'm out of the office until Monday with limited access to email.,Onboarded,Senior Operator,
+E484,2026-10-18 13:03,Darcy Kelly,darcy.kelly@example.com,Roles,Can I see roles that offer visa sponsorship?,Onboarded,Generalist,
+E485,2026-10-18 13:25,Jonah Burke,jburke@example.com,Quick question about the video,Is the video compulsory?,Onboarded,Marketing,
+E486,2026-10-18 13:44,Willow Banks,willow.banks27@example.com,Did you get my application?,"Hi, I applied a week ago and haven't heard anything. How long does it take?",Applied,Generalist,
+E487,2026-10-18 13:53,Kasia Kelly,kkelly@example.com,Quick chase,"Hi, could you chase Tidewater for me? Still waiting after my first round.",Interviewing,Marketing,Tidewater
+E488,2026-10-18 13:55,Callie Wood,cwood@example.com,URGENT,Can I change the font on my CV preview?,Onboarded,Marketing,
+E489,2026-10-18 14:00,Adam Price,adam.price@example.com,Re: Video,Uploaded fine today. Ignore my last email.,Onboarded,Generalist,
+E490,2026-10-18 14:52,Dami Bailey,dami.bailey@example.com,Quick question about the video,What should I talk about in my intro video?,Onboarded,Marketing,
+E491,2026-10-18 14:56,Kasia Stone,kstone@example.com,My application,"Hi, I applied three weeks ago and haven't heard anything. How long does it take?",Applied,Generalist,
+E492,2026-10-18 15:08,Simran Dale,simran.dale@example.com,Remove me,unsubscribe,Hired,Senior Operator,
+E493,2026-10-18 15:48,Rosa Andrews,rosa.andrews23@example.com,Remove me,Please unsubscribe me.,Hired,Sales,
+E494,2026-10-18 16:17,Nia Iqbal,nia.iqbal90@example.com,Application status,I applied last week. Is there anything else I need to do?,Applied,Sales,
+E495,2026-10-18 16:42,Toby Farrell,tfarrell@example.com,Update on my application,"Sorry to bother you, is there any update from Kestrel Labs?",Interviewing,Sales,Kestrel Labs
+E496,2026-10-18 16:47,Cara Iqbal,cara.iqbal6@example.com,Pause account,Can I pause my profile for a few weeks?,Onboarded,Sales,
+E497,2026-10-18 17:19,Callie Kelly,callie.kelly79@example.com,Change stream,Can I switch to a different stream?,Onboarded,Generalist,
+E498,2026-10-18 17:33,Adele Kim,adele.kim@example.com,Automatic reply: Your weekly roles,Thanks for your message. I'm on annual leave and will reply on my return.,Hired,Generalist,
+E499,2026-10-18 18:01,Hattie Singh,hattiesingh@example.com,Quick thank you,Thanks so much for your help this week!,Onboarded,Senior Operator,
+E500,2026-10-18 18:20,Henry Walsh,henry.walsh@example.com,Re: Interview tomorrow - need to reschedule,"I never heard back about rescheduling, and Brindle AI haven't replied either. Am I still in the process?",Interviewing,Generalist,Brindle AI
+E501,2026-10-18 18:44,Kiran Stone,kiran.stone22@example.com,Quick chase,"Sorry to bother you, is there any update from Fennel Labs?",Interviewing,Senior Operator,Fennel Labs
+E502,2026-10-18 18:58,Faye Taylor,faye.taylor@example.com,Automatic reply,Out of office. Back 26 October.,Onboarded,Generalist,
+E503,2026-10-18 19:06,Sana Hart,sana.hart59@example.com,My application,When will I hear back about joining Jumpstart?,Applied,Generalist,
+E504,2026-10-18 20:08,Billy Gray,billy.gray@example.com,Thanks!,"Thanks for the intro, the interview went well.",Interviewing,Sales,
+E505,2026-10-18 20:40,Tanya Briggs,tanya.briggs@example.com,Urgent - interview tomorrow,What should I wear to my Fennel Labs interview tomorrow? Is smart casual OK?,Interviewing,Marketing,Fennel Labs
+E506,2026-10-18 20:56,Kai Owen,kowen@example.com,Quick thank you,Thank you for the quick reply yesterday.,Onboarded,Generalist,
+E507,2026-10-18 21:04,Alfie Lamb,alamb@example.com,Rejection,Got a no from Kestrel Labs after the final round. Any feedback would really help.,Rejected,Marketing,Kestrel Labs
+E508,2026-10-18 21:45,Zara Hussain,zara.hussain@example.com,Re: Quick question about Driftwell,They want me to start the trial tomorrow. Should I do it?,Interviewing,Generalist,Driftwell
+E509,2026-10-18 22:09,Jake Lane,jakelane@example.com,Re: Status update,Still no news from Pinecart. Should I assume it's a no?,Interviewing,Senior Operator,Pinecart
+E510,2026-10-18 22:30,Leo Martins,leo.martins@example.com,Re: Interview update,Third time asking. Copperleaf have gone silent.,Interviewing,Senior Operator,Copperleaf

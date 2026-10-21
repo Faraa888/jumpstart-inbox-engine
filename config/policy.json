@@ -1,0 +1,500 @@
+{
+  "_readme": "Ops-editable policy. intent (+ optional sub) -> lane, owner, priority (0 = now, 3 = batch), SLA, reply template, automatic actions and proposed actions. Lanes: AUTO_REPLY (reply + act), AUTO_ACTION (act, no reply needed), DRAFT (reply drafted, one-click human approve), HUMAN (escalate with a brief). Overrides in 'overrides' always win.",
+  "now": "2026-10-19T09:00:00",
+  "params": {
+    "min_confidence": 0.8,
+    "late_after_hours": 72,
+    "chase_followup_working_days": 3,
+    "repeat_escalate_at": 3,
+    "aged_application_days": 14,
+    "incident_threshold": 3,
+    "watchlist_frustration_reports": 3,
+    "referral_link": "https://jumpstart.example/refer"
+  },
+  "overrides": {
+    "hard_flags_force_human": [
+      "wellbeing",
+      "injection",
+      "privacy_legal",
+      "data_exposure",
+      "discrimination",
+      "unpaid_work",
+      "public_threat",
+      "rtw_docs",
+      "accessibility",
+      "offer_withdrawn"
+    ],
+    "stage_offer_forces_human": true,
+    "low_confidence_forces_human": true,
+    "watchlist_startup_forces_human_for": [
+      "status_chase",
+      "feedback_request",
+      "interview_prep",
+      "rejection_notice"
+    ],
+    "repeat_chaser_forces_human": true,
+    "frustration_strong_downgrades_auto_to_draft": true,
+    "multi_part_downgrades_auto_to_draft": true
+  },
+  "intents": {
+    "status_chase": {
+      "lane": "AUTO_REPLY",
+      "owner": "talent-ops",
+      "priority": 2,
+      "sla_hours": 48,
+      "template": "chase_first",
+      "actions": [
+        "add_to_startup_digest"
+      ]
+    },
+    "application_status": {
+      "lane": "AUTO_REPLY",
+      "owner": "screening",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "app_status",
+      "actions": [
+        "log_application_age"
+      ]
+    },
+    "feedback_request": {
+      "lane": "AUTO_REPLY",
+      "owner": "talent-ops",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "feedback_ack",
+      "actions": [
+        "request_startup_feedback"
+      ]
+    },
+    "rejection_notice": {
+      "lane": "AUTO_REPLY",
+      "owner": "talent-ops",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "rejection_ack",
+      "actions": [
+        "log_startup_response_time"
+      ]
+    },
+    "interview_prep": {
+      "lane": "AUTO_REPLY",
+      "owner": "talent-ops",
+      "priority": 3,
+      "sla_hours": 48,
+      "template": "prep",
+      "actions": []
+    },
+    "salary_guidance": {
+      "lane": "DRAFT",
+      "owner": "talent-ops",
+      "priority": 2,
+      "sla_hours": 24,
+      "template": "salary_draft",
+      "actions": []
+    },
+    "reference_help": {
+      "lane": "DRAFT",
+      "owner": "talent-ops",
+      "priority": 2,
+      "sla_hours": 24,
+      "template": "reference_draft",
+      "actions": []
+    },
+    "faq": {
+      "lane": "AUTO_REPLY",
+      "owner": "support",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "faq",
+      "actions": []
+    },
+    "referral": {
+      "lane": "AUTO_REPLY",
+      "owner": "growth",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "referral",
+      "actions": [
+        "tag_referrer"
+      ]
+    },
+    "product_feedback": {
+      "lane": "AUTO_REPLY",
+      "owner": "product",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "product_ack",
+      "actions": [
+        "tag_product_feedback"
+      ]
+    },
+    "visa_sponsorship": {
+      "lane": "DRAFT",
+      "owner": "talent-ops",
+      "priority": 2,
+      "sla_hours": 48,
+      "template": "visa_draft",
+      "actions": [
+        "tag_product_feedback"
+      ]
+    },
+    "negative_experience": {
+      "lane": "DRAFT",
+      "owner": "talent-ops",
+      "priority": 2,
+      "sla_hours": 48,
+      "template": "negative_draft",
+      "actions": [
+        "tag_product_feedback"
+      ]
+    },
+    "placement_success": {
+      "lane": "AUTO_REPLY",
+      "owner": "talent-ops",
+      "priority": 3,
+      "sla_hours": 72,
+      "template": "placement",
+      "actions": [
+        "update_stage_hired",
+        "log_placement"
+      ]
+    },
+    "thanks": {
+      "lane": "AUTO_ACTION",
+      "owner": "talent-ops",
+      "priority": 3,
+      "sla_hours": 168,
+      "template": null,
+      "actions": [
+        "log_sentiment_positive"
+      ]
+    },
+    "ooo_autoreply": {
+      "lane": "AUTO_ACTION",
+      "owner": "talent-ops",
+      "priority": 3,
+      "sla_hours": 168,
+      "template": null,
+      "actions": [
+        "defer_outreach_until_return"
+      ]
+    },
+    "video_resolved": {
+      "lane": "AUTO_ACTION",
+      "owner": "engineering",
+      "priority": 3,
+      "sla_hours": 168,
+      "template": null,
+      "actions": [
+        "mark_incident_link_resolved"
+      ]
+    },
+    "vendor_inbound": {
+      "lane": "AUTO_ACTION",
+      "owner": "partnerships",
+      "priority": 3,
+      "sla_hours": 168,
+      "template": null,
+      "actions": [
+        "route_vendor"
+      ]
+    },
+    "unsubscribe": {
+      "lane": "AUTO_REPLY",
+      "owner": "compliance",
+      "priority": 0,
+      "sla_hours": 1,
+      "template": "unsub_ack",
+      "actions": [
+        "suppress_marketing"
+      ]
+    },
+    "data_deletion": {
+      "lane": "AUTO_REPLY",
+      "owner": "compliance",
+      "priority": 1,
+      "sla_hours": 24,
+      "template": "deletion_ack",
+      "actions": [
+        "suppress_marketing",
+        "open_erasure_ticket"
+      ],
+      "proposed": [
+        "execute_erasure"
+      ]
+    },
+    "account_admin": {
+      "_default": {
+        "lane": "AUTO_REPLY",
+        "owner": "support",
+        "priority": 3,
+        "sla_hours": 72,
+        "template": "howto",
+        "actions": []
+      },
+      "howto": {
+        "lane": "AUTO_REPLY",
+        "owner": "support",
+        "priority": 3,
+        "sla_hours": 72,
+        "template": "howto",
+        "actions": []
+      },
+      "change_email": {
+        "lane": "AUTO_REPLY",
+        "owner": "support",
+        "priority": 2,
+        "sla_hours": 48,
+        "template": "change_email",
+        "actions": [
+          "send_verification_link"
+        ]
+      },
+      "login": {
+        "lane": "AUTO_REPLY",
+        "owner": "support",
+        "priority": 2,
+        "sla_hours": 48,
+        "template": "login_help",
+        "actions": [
+          "send_fresh_magic_link"
+        ]
+      },
+      "pause_profile": {
+        "lane": "AUTO_REPLY",
+        "owner": "support",
+        "priority": 3,
+        "sla_hours": 72,
+        "template": "pause",
+        "actions": [
+          "set_profile_paused"
+        ]
+      },
+      "stream_change": {
+        "lane": "DRAFT",
+        "owner": "talent-ops",
+        "priority": 3,
+        "sla_hours": 72,
+        "template": "stream_draft",
+        "actions": []
+      }
+    },
+    "platform_bug": {
+      "_default": {
+        "lane": "DRAFT",
+        "owner": "engineering",
+        "priority": 2,
+        "sla_hours": 24,
+        "template": "bug_draft",
+        "actions": []
+      },
+      "video_upload": {
+        "lane": "AUTO_REPLY",
+        "owner": "engineering",
+        "priority": 2,
+        "sla_hours": 24,
+        "template": "video_incident",
+        "actions": [
+          "link_to_incident"
+        ]
+      },
+      "apply_button": {
+        "lane": "AUTO_REPLY",
+        "owner": "engineering",
+        "priority": 2,
+        "sla_hours": 48,
+        "template": "apply_button",
+        "actions": [
+          "link_to_incident"
+        ]
+      },
+      "listing_missing": {
+        "lane": "DRAFT",
+        "owner": "talent-ops",
+        "priority": 1,
+        "sla_hours": 24,
+        "template": "listing_draft",
+        "actions": [
+          "link_to_incident"
+        ]
+      },
+      "resolved": {
+        "lane": "AUTO_ACTION",
+        "owner": "talent-ops",
+        "priority": 3,
+        "sla_hours": 168,
+        "template": null,
+        "actions": [
+          "mark_incident_link_resolved"
+        ]
+      },
+      "video_check": {
+        "lane": "DRAFT",
+        "owner": "engineering",
+        "priority": 2,
+        "sla_hours": 24,
+        "template": "video_check_draft",
+        "actions": [
+          "link_to_incident"
+        ]
+      }
+    },
+    "sar": {
+      "lane": "HUMAN",
+      "owner": "dpo",
+      "priority": 1,
+      "sla_hours": 24,
+      "template": null,
+      "actions": [
+        "open_sar_ticket",
+        "suppress_marketing"
+      ]
+    },
+    "complaint_regulatory": {
+      "lane": "HUMAN",
+      "owner": "dpo",
+      "priority": 0,
+      "sla_hours": 4,
+      "template": null,
+      "actions": [
+        "suppress_marketing",
+        "page_owner"
+      ]
+    },
+    "data_incident": {
+      "lane": "HUMAN",
+      "owner": "dpo",
+      "priority": 0,
+      "sla_hours": 2,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ],
+      "proposed": [
+        "quarantine_cv_views"
+      ]
+    },
+    "discrimination_report": {
+      "lane": "HUMAN",
+      "owner": "head-of-ops",
+      "priority": 0,
+      "sla_hours": 4,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ],
+      "proposed": [
+        "hold_startup_intros"
+      ]
+    },
+    "startup_conduct": {
+      "lane": "HUMAN",
+      "owner": "head-of-ops",
+      "priority": 1,
+      "sla_hours": 8,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ],
+      "proposed": [
+        "hold_startup_intros"
+      ]
+    },
+    "reputational_threat": {
+      "lane": "HUMAN",
+      "owner": "head-of-ops",
+      "priority": 1,
+      "sla_hours": 8,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ]
+    },
+    "offer_support": {
+      "lane": "HUMAN",
+      "owner": "talent-ops",
+      "priority": 1,
+      "sla_hours": 8,
+      "template": null,
+      "actions": []
+    },
+    "offer_withdrawn": {
+      "lane": "HUMAN",
+      "owner": "head-of-ops",
+      "priority": 0,
+      "sla_hours": 2,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ]
+    },
+    "reschedule_request": {
+      "lane": "HUMAN",
+      "owner": "talent-ops",
+      "priority": 0,
+      "sla_hours": 2,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ],
+      "proposed": [
+        "notify_startup_reschedule"
+      ]
+    },
+    "startup_no_show": {
+      "lane": "HUMAN",
+      "owner": "talent-ops",
+      "priority": 1,
+      "sla_hours": 8,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ]
+    },
+    "rtw_documents": {
+      "lane": "HUMAN",
+      "owner": "dpo",
+      "priority": 1,
+      "sla_hours": 24,
+      "template": null,
+      "actions": []
+    },
+    "accessibility_request": {
+      "lane": "HUMAN",
+      "owner": "talent-ops",
+      "priority": 1,
+      "sla_hours": 24,
+      "template": null,
+      "actions": []
+    },
+    "unknown": {
+      "lane": "HUMAN",
+      "owner": "talent-ops",
+      "priority": 2,
+      "sla_hours": 24,
+      "template": null,
+      "actions": []
+    },
+    "wellbeing_concern": {
+      "lane": "HUMAN",
+      "owner": "head-of-ops",
+      "priority": 0,
+      "sla_hours": 1,
+      "template": null,
+      "actions": [
+        "page_owner"
+      ]
+    }
+  },
+  "product_feature_labels": {
+    "filter_salary": "a minimum salary filter",
+    "filter_remote": "a remote-only filter",
+    "filter_location": "a location filter",
+    "stream_relevance": "better matching to your stream",
+    "seniority": "seniority controls",
+    "zero_matches": "your profile visibility",
+    "content": "a newsletter on that topic",
+    "other": "that"
+  }
+}

@@ -1,0 +1,761 @@
+{
+  "name": "Jumpstart inbox engine",
+  "nodes": [
+    {
+      "id": "a1",
+      "name": "New email in demo inbox",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "mailbox": "Jumpstart Demo",
+        "postProcessAction": "read",
+        "format": "simple",
+        "options": {}
+      },
+      "credentials": {
+        "imap": {
+          "id": "",
+          "name": "Demo inbox IMAP"
+        }
+      }
+    },
+    {
+      "id": "a3",
+      "name": "Tidy email fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1",
+              "name": "from_email",
+              "type": "string",
+              "value": "={{ ($json.from || '').match(/<([^>]+)>/)?.[1] || $json.from }}"
+            },
+            {
+              "id": "2",
+              "name": "from_name",
+              "type": "string",
+              "value": "={{ ($json.from || '').split('<')[0].replace(/\"/g,'').trim() }}"
+            },
+            {
+              "id": "3",
+              "name": "subject",
+              "type": "string",
+              "value": "={{ $json.subject }}"
+            },
+            {
+              "id": "4",
+              "name": "body",
+              "type": "string",
+              "value": "={{ ($json.textPlain || '').split(/\\nOn .+wrote:/)[0].trim() }}"
+            },
+            {
+              "id": "5",
+              "name": "received_at",
+              "type": "string",
+              "value": "={{ $json.date }}"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "a2",
+      "name": "Replayed email (510 sample)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        200
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "inbound-email",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "id": "a4",
+      "name": "Unwrap replayed email",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        200
+      ],
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ JSON.stringify($json.body) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "a5",
+      "name": "Triage (engine)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        100
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:8080/triage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "a6",
+      "name": "Route by outcome",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        720,
+        100
+      ],
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "outputKey": "auto",
+              "renameOutput": true,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c1",
+                    "leftValue": "={{ $json.outcome }}",
+                    "rightValue": "auto",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ]
+              },
+              "options": {}
+            },
+            {
+              "outputKey": "person",
+              "renameOutput": true,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c2",
+                    "leftValue": "={{ $json.outcome }}",
+                    "rightValue": "person",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ]
+              },
+              "options": {}
+            },
+            {
+              "outputKey": "silent",
+              "renameOutput": true,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c3",
+                    "leftValue": "={{ $json.outcome }}",
+                    "rightValue": "silent",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ]
+              },
+              "options": {}
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "a7",
+      "name": "Real address?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        -60
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c4",
+              "leftValue": "={{ $json.deliver }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "a8",
+      "name": "Wait 5 to 30 min",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        -120
+      ],
+      "parameters": {
+        "amount": "={{ $json.delay_seconds }}",
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "a9",
+      "name": "Send reply (Resend)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        -120
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.resend.com/emails",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ from: 'Jumpstart Candidate Team <onboarding@resend.dev>', to: [$json.to], reply_to: 'faraazanjum.consulting+jumpstart@gmail.com', subject: $json.reply.subject, text: $json.reply.body }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "",
+          "name": "Resend API key"
+        }
+      }
+    },
+    {
+      "id": "a10",
+      "name": "Logged: sample address",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        20
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "a11",
+      "name": "Post to Slack #talent-ops",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        100
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "PASTE_SLACK_WEBHOOK_URL",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.slack_text }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "a12",
+      "name": "Acknowledge now?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1200,
+        100
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c5",
+              "leftValue": "={{ $('Route by outcome').item.json.ack && $('Route by outcome').item.json.deliver ? 'yes' : 'no' }}",
+              "rightValue": "yes",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "a13",
+      "name": "Send acknowledgement (Resend)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        80
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.resend.com/emails",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ from: 'Jumpstart Candidate Team <onboarding@resend.dev>', to: [$('Route by outcome').item.json.to], reply_to: 'faraazanjum.consulting+jumpstart@gmail.com', subject: $('Route by outcome').item.json.ack.subject, text: $('Route by outcome').item.json.ack.body }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "",
+          "name": "Resend API key"
+        }
+      }
+    },
+    {
+      "id": "a14",
+      "name": "Silent: logged, no reply",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        960,
+        260
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "b1",
+      "name": "Approved in review page",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        460
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "send-reply",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "id": "b2",
+      "name": "Send approved reply (Resend)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        460
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.resend.com/emails",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ from: 'Jumpstart Candidate Team <onboarding@resend.dev>', to: [$json.body.to], reply_to: 'faraazanjum.consulting+jumpstart@gmail.com', subject: $json.body.subject, text: $json.body.body }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "",
+          "name": "Resend API key"
+        }
+      }
+    },
+    {
+      "id": "c1",
+      "name": "9am and 3pm on weekdays",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        640
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9,15 * * 1-5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "c2",
+      "name": "Who still needs a reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        640
+      ],
+      "parameters": {
+        "url": "http://localhost:8080/digest",
+        "options": {}
+      }
+    },
+    {
+      "id": "c3",
+      "name": "Anything waiting?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        480,
+        640
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "d1",
+              "leftValue": "={{ $json.count }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "c4",
+      "name": "Post reminder to Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        620
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "PASTE_SLACK_WEBHOOK_URL",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.slack_text }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "d1",
+      "name": "Replay finished",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        820
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "replay-done",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "id": "d2",
+      "name": "Run summary",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        820
+      ],
+      "parameters": {
+        "url": "http://localhost:8080/summary",
+        "options": {}
+      }
+    },
+    {
+      "id": "d3",
+      "name": "Post summary to Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        820
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "PASTE_SLACK_WEBHOOK_URL",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.slack_text }) }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "New email in demo inbox": {
+      "main": [
+        [
+          {
+            "node": "Tidy email fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tidy email fields": {
+      "main": [
+        [
+          {
+            "node": "Triage (engine)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replayed email (510 sample)": {
+      "main": [
+        [
+          {
+            "node": "Unwrap replayed email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Unwrap replayed email": {
+      "main": [
+        [
+          {
+            "node": "Triage (engine)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Triage (engine)": {
+      "main": [
+        [
+          {
+            "node": "Route by outcome",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route by outcome": {
+      "main": [
+        [
+          {
+            "node": "Real address?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Post to Slack #talent-ops",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Silent: logged, no reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Real address?": {
+      "main": [
+        [
+          {
+            "node": "Wait 5 to 30 min",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Logged: sample address",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5 to 30 min": {
+      "main": [
+        [
+          {
+            "node": "Send reply (Resend)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post to Slack #talent-ops": {
+      "main": [
+        [
+          {
+            "node": "Acknowledge now?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Acknowledge now?": {
+      "main": [
+        [
+          {
+            "node": "Send acknowledgement (Resend)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Approved in review page": {
+      "main": [
+        [
+          {
+            "node": "Send approved reply (Resend)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "9am and 3pm on weekdays": {
+      "main": [
+        [
+          {
+            "node": "Who still needs a reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Who still needs a reply": {
+      "main": [
+        [
+          {
+            "node": "Anything waiting?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anything waiting?": {
+      "main": [
+        [
+          {
+            "node": "Post reminder to Slack",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Replay finished": {
+      "main": [
+        [
+          {
+            "node": "Run summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run summary": {
+      "main": [
+        [
+          {
+            "node": "Post summary to Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

@@ -1,0 +1,124 @@
+{
+  "_readme": "Mock facts database. This is the information Jumpstart would collect so candidate questions can be answered without a person. Values are invented for the demo. null = a gap: the first email that needs it goes to a person, their answer is saved here, and every later email gets it automatically. '_simulated_answers' holds what a person would type, used only to simulate the fill in batch runs.",
+  "platform": {
+    "stream_policy": "You can be in up to two streams at once. Update them any time under Profile > Preferences, and your matches refresh within a day.",
+    "visa_filter": "dud",
+    "rebooking_link": "https://jumpstart.example/rebook",
+    "secure_upload_link": "https://jumpstart.example/secure-upload",
+    "application_alternative": "Yes. You can apply by a short phone call instead of the written questions. Book a slot here: https://jumpstart.example/call-apply"
+  },
+  "startups": {
+    "Bramble Health": {
+      "visa_sponsorship": "no",
+      "salary_range": "£35k to £45k",
+      "interview_process": "2 rounds: intro call, then a final with the founders",
+      "typical_feedback_days": 5
+    },
+    "Brindle AI": {
+      "visa_sponsorship": "yes",
+      "salary_range": "£45k to £60k plus equity",
+      "interview_process": "3 rounds: intro, case, final",
+      "typical_feedback_days": 4
+    },
+    "Copperleaf": {
+      "visa_sponsorship": null,
+      "salary_range": "£38k to £48k",
+      "interview_process": "3 rounds: intro, second, final",
+      "typical_feedback_days": 7
+    },
+    "Driftwell": {
+      "visa_sponsorship": "no",
+      "salary_range": null,
+      "interview_process": null,
+      "typical_feedback_days": null
+    },
+    "Fennel Labs": {
+      "visa_sponsorship": "yes",
+      "salary_range": "£40k to £50k",
+      "interview_process": "2 rounds and a short take-home",
+      "typical_feedback_days": 5
+    },
+    "Harbourlight": {
+      "visa_sponsorship": null,
+      "salary_range": "£36k to £44k",
+      "interview_process": "2 rounds",
+      "typical_feedback_days": 6
+    },
+    "Juniper Loop": {
+      "visa_sponsorship": "no",
+      "salary_range": "£32k to £40k",
+      "interview_process": null,
+      "typical_feedback_days": 5
+    },
+    "Kestrel Labs": {
+      "visa_sponsorship": "yes",
+      "salary_range": null,
+      "interview_process": "3 rounds including a case study",
+      "typical_feedback_days": 4
+    },
+    "Larkspur": {
+      "visa_sponsorship": null,
+      "salary_range": "£34k to £42k",
+      "interview_process": "2 rounds",
+      "typical_feedback_days": null
+    },
+    "Moorgate AI": {
+      "visa_sponsorship": "yes",
+      "salary_range": "£50k to £65k",
+      "interview_process": "3 rounds",
+      "typical_feedback_days": 5
+    },
+    "Nimbleway": {
+      "visa_sponsorship": "no",
+      "salary_range": "£35k to £45k",
+      "interview_process": "2 rounds",
+      "typical_feedback_days": 6
+    },
+    "Orchard Pay": {
+      "visa_sponsorship": "no",
+      "salary_range": "£42k to £52k",
+      "interview_process": "3 rounds: intro, skills, final",
+      "typical_feedback_days": 4
+    },
+    "Pinecart": {
+      "visa_sponsorship": null,
+      "salary_range": null,
+      "interview_process": "2 rounds",
+      "typical_feedback_days": 5
+    },
+    "Quillstack": {
+      "visa_sponsorship": "yes",
+      "salary_range": "£40k to £50k plus equity",
+      "interview_process": "3 rounds",
+      "typical_feedback_days": 3
+    },
+    "Saltmarsh": {
+      "visa_sponsorship": "no",
+      "salary_range": "£33k to £40k",
+      "interview_process": null,
+      "typical_feedback_days": 7
+    },
+    "Tallowby": {
+      "visa_sponsorship": null,
+      "salary_range": "£36k to £46k",
+      "interview_process": "2 rounds",
+      "typical_feedback_days": 5
+    },
+    "Tidewater": {
+      "visa_sponsorship": "yes",
+      "salary_range": "£38k to £48k",
+      "interview_process": "2 rounds and a presentation",
+      "typical_feedback_days": 6
+    }
+  },
+  "_simulated_answers": {
+    "platform.visa_filter": "There isn't a sponsorship filter yet. The startups below have told us they sponsor Skilled Worker visas, and their listings say so.",
+    "Pinecart.salary_range": "£36k to £46k",
+    "Copperleaf.visa_sponsorship": "no",
+    "Driftwell.salary_range": "£30k to £38k",
+    "*": "answered by a person"
+  },
+  "params": {
+    "gap_answer_hours": 4
+  }
+}

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jumpstart candidate inbox</title>
+<style>
+:root{--ground:#eef1f5;--panel:#fff;--ink:#15233d;--muted:#5b6a7d;--line:#d5dce6;--sel:#e3e9f2;
+ --auto:#0f7c7b;--auto-bg:#d8efee;--quiet:#8a97a8;--quiet-bg:#e9edf2;--you:#c92a3e;--you-bg:#f9dde1;--amber:#b7791f;--amber-bg:#f6e8cc;--blue:#3b6fb6;--blue-bg:#dde8f7;
+ --serif:Georgia,"Iowan Old Style","Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--r:6px}
+@media (prefers-color-scheme:dark){:root{--ground:#0f1826;--panel:#172336;--ink:#e8edf5;--muted:#9db0c7;--line:#2a3b55;--sel:#22334d;
+ --auto:#4fc3c1;--auto-bg:#143a3b;--quiet:#7f8da0;--quiet-bg:#1e2a3c;--you:#ff6b7d;--you-bg:#4a1a22;--amber:#e8b04a;--amber-bg:#3b2f14;--blue:#6ea2e8;--blue-bg:#1b2c45}}
+[hidden]{display:none!important}*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--ground)}
+body{font:15px/1.5 var(--sans);color:var(--ink);display:flex;flex-direction:column}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.2}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:21px}
+.sub{color:var(--muted);font-size:13px}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--auto)}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--auto);display:inline-block}
+.views{margin-left:auto;display:flex;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.views button{border:0;background:none;padding:6px 14px;cursor:pointer;color:var(--muted);font-weight:600}
+.views button[aria-pressed=true]{background:var(--ink);color:var(--panel)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+.f{border:1px solid var(--line);background:var(--panel);border-radius:99px;padding:6px 14px;cursor:pointer;font-weight:600;display:flex;gap:8px;align-items:center}
+.f b{font-family:var(--serif);font-size:17px}
+.f[aria-pressed=true].you{background:var(--you-bg);border-color:var(--you);color:var(--you)}
+.f[aria-pressed=true].auto{background:var(--auto-bg);border-color:var(--auto);color:var(--auto)}
+.f[aria-pressed=true].quiet{background:var(--quiet-bg);border-color:var(--quiet)}
+.f input{border:0;background:none;outline:none;width:200px}
+.search{margin-left:auto;font-weight:400}
+main{flex:1;display:grid;grid-template-columns:minmax(280px,380px) 1fr;min-height:0}
+.list{border-right:1px solid var(--line);overflow:auto;background:var(--panel)}
+.row{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:none;padding:10px 14px;cursor:pointer}
+.row[aria-current=true]{background:var(--sel)}
+.row .top{display:flex;justify-content:space-between;gap:8px}.row .n{font-weight:600}.row .t{color:var(--muted);font-size:12px;white-space:nowrap}
+.row .s{font-size:13px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chip{display:inline-block;font-size:11px;font-weight:700;padding:0 7px;border-radius:99px;margin-right:6px;vertical-align:1px}
+.c-critical{background:var(--you-bg);color:var(--you)}.c-partner{background:var(--blue-bg);color:var(--blue)}
+.c-gap,.c-reviewer,.c-unknown{background:var(--amber-bg);color:var(--amber)}.c-new{background:var(--auto);color:var(--panel)}
+.group{padding:8px 14px;font-size:12px;font-weight:700;color:var(--muted);background:var(--ground);border-bottom:1px solid var(--line)}
+.detail{overflow:auto;padding:22px 28px 60px}
+.detail h2{font-size:22px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:14px}
+.msg{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin-bottom:18px;white-space:pre-wrap}
+.msg b{display:block;margin-bottom:4px}
+.trail{list-style:none;padding:0;margin:0 0 18px;border-left:2px solid var(--line)}
+.trail li{position:relative;padding:2px 0 10px 18px}
+.trail li::before{content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--panel);border:2px solid var(--quiet)}
+.trail li.end::before{background:var(--ink);border-color:var(--ink)}
+.trail li.warn::before{border-color:var(--you)}
+.trail .k{font-weight:600}.trail .v{color:var(--muted)}
+h3.h{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:700;margin:16px 0 6px}
+textarea{width:100%;min-height:190px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;resize:vertical}
+input.subj{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:7px 12px;margin-bottom:8px}
+.btn{background:var(--ink);color:var(--panel);border:0;border-radius:var(--r);padding:8px 18px;font-weight:600;cursor:pointer}
+.btn[disabled]{opacity:.55;cursor:default}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.note{font-size:13px;color:var(--muted)}.ok{color:var(--auto);font-weight:600}.bad{color:var(--you);font-weight:600}
+.steps{margin:0;padding-left:18px}
+.gapbox{border:1px solid var(--amber);background:var(--amber-bg);border-radius:var(--r);padding:10px 12px;margin-bottom:16px}
+.gapbox input{width:100%;margin:6px 0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:7px 10px}
+.empty{color:var(--muted);padding:40px 0}
+/* results */
+.report{overflow:auto;padding:24px 20px 80px}
+.report section{max-width:980px;margin:0 auto 26px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.report h2{font-size:21px;margin-bottom:6px}.report p{max-width:75ch}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.kv div{background:var(--ground);border-radius:var(--r);padding:10px 12px}.kv b{display:block;font:700 26px var(--serif)}.kv small{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-size:13px}
+.flow{display:grid;grid-template-columns:190px 1fr 1fr;gap:6px 14px;align-items:center;font-size:14px}
+.fb{display:flex;align-items:center;gap:8px}.fb i{display:block;height:14px;border-radius:3px;min-width:2px}
+.gapcell{background:var(--amber-bg);color:var(--amber);font-weight:600;border-radius:4px;padding:1px 6px}
+.hist{display:flex;align-items:flex-end;gap:10px;height:110px;margin:22px 0 4px}.hist div{flex:1;background:var(--blue);border-radius:3px 3px 0 0;position:relative}
+.hist div b{position:absolute;top:-19px;left:0;right:0;text-align:center;font-size:12px}.hlab{display:flex;gap:10px;font-size:12px;color:var(--muted)}.hlab span{flex:1;text-align:center}
+@media(max-width:820px){main{grid-template-columns:1fr}.list{max-height:40vh;border-right:0;border-bottom:1px solid var(--line)}.detail{padding:16px}.flow{grid-template-columns:1fr 1fr 1fr}.f input{width:120px}}
+
+.story{overflow:auto;padding:0 20px 120px}
+.story section{max-width:1040px;margin:0 auto;padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.story h2{font-size:40px;margin-bottom:18px}.story .lead{font-size:20px;color:var(--muted);max-width:62ch;margin:0 0 22px}
+.story ul.big{font-size:20px;line-height:1.7;padding-left:22px;margin:0 0 22px}
+.dots{display:grid;grid-template-columns:repeat(auto-fill,14px);gap:4px;margin:18px 0 10px}
+.dots i{width:14px;height:14px;border-radius:3px;background:var(--quiet-bg);display:block}
+.dots i.r{background:var(--you)}.dots i.a{background:var(--auto)}.dots i.q{background:var(--quiet)}.dots i.b{background:var(--blue)}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--muted)}.key i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cols3>div{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.cols3 h3{font-family:var(--sans);font-size:17px;color:var(--auto);margin-bottom:12px}
+.hb{display:grid;grid-template-columns:1fr auto;gap:2px 10px;font-size:15px;margin-bottom:10px}.hb .bar{grid-column:1/-1;height:8px;border-radius:4px;background:var(--auto)}
+.flowrow{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:8px 0 20px}
+.flowrow div{flex:1;min-width:150px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.flowrow div b{display:block;font-size:16px;margin-bottom:4px}.flowrow div span{font-size:14px;color:var(--muted)}
+.flowrow div.hi{background:var(--auto-bg);border-color:var(--auto)}
+.panel2{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.darkp{background:var(--ink);color:var(--panel);border-radius:var(--r);padding:18px 20px}.darkp h3{font-family:var(--sans);font-size:17px;margin-bottom:8px}.darkp ul{margin:0;padding-left:18px;line-height:1.6}
+.cta{display:inline-block;margin-top:14px}
+@media(max-width:820px){.cols3,.panel2{grid-template-columns:1fr}.story h2{font-size:30px}}
+</style>
+</head>
+<body>
+<header>
+ <div><h1>Jumpstart candidate inbox</h1><div class="sub" id="sub"></div></div>
+ <span class="live" id="live" hidden><i></i>Live</span>
+ <div class="views" role="group" aria-label="View"><button data-v="story" aria-pressed="true">Story</button><button data-v="inbox" aria-pressed="false">Inbox</button><button data-v="report" aria-pressed="false">Results</button></div>
+</header>
+<div class="filters" id="filters"></div>
+<main id="inbox"><nav class="list" id="list" aria-label="Emails"></nav><article class="detail" id="detail"></article></main>
+<div class="report" id="report" hidden></div>
+<div class="story" id="story" hidden></div>
+<script id="payload" type="application/json">__DATA__</script>
+<script>
+let D = JSON.parse(document.getElementById('payload').textContent);
+const LIVE = location.protocol.startsWith('http') && D.live_mode;
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $ = s => document.querySelector(s);
+const WHY = {critical:'Critical',partner:'Live offer',reviewer:'Reviewer held back',gap:'Missing fact',unknown:'Unclassified'};
+const BUCKET = e => e.lane==='HUMAN'?'you':e.lane==='AUTO_REPLY'?'auto':'quiet';
+const st = {view:'story', bucket:'you', sel:null, q:'', sent:{}, edits:{}, filled:{}};
+const words = s => String(s||'').replace(/_/g,' ');
+const hm = s => s? s.slice(11,16):'';
+const day = s => s? new Date(s.replace(' ','T')).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'}):'';
+function emails(){ return LIVE ? (D.live_emails||[]) : D.emails; }
+
+function header(){
+  const M=D.metrics, all=emails(), you=all.filter(e=>e.lane==='HUMAN'&&!st.sent[e.id]&&e.status!=='sent');
+  $('#sub').textContent= LIVE ? `Live: ${all.length} emails processed through n8n so far. Replies to the sample week's fictional addresses are logged; real addresses get real email through Resend.`
+    : `Week of 12 to 18 October: ${M.emails} emails from ${M.unique_people} people. A snapshot: nothing is sent from here.`;
+  $('#live').hidden=!LIVE;
+  const c=b=>all.filter(e=>BUCKET(e)===b).length;
+  $('#filters').innerHTML=`<button class="f you" data-b="you" aria-pressed="${st.bucket==='you'}"><b>${you.length}</b> Needs you</button>
+   <button class="f auto" data-b="auto" aria-pressed="${st.bucket==='auto'}"><b>${c('auto')}</b> Answered automatically</button>
+   <button class="f quiet" data-b="quiet" aria-pressed="${st.bucket==='quiet'}"><b>${c('quiet')}</b> No reply needed</button>
+   <label class="f search"><span class="sr" hidden>Search</span><input id="q" type="search" placeholder="Search names or text" value="${esc(st.q)}"></label>`;
+  document.querySelectorAll('.f[data-b]').forEach(b=>b.onclick=()=>{st.bucket=b.dataset.b;st.sel=null;render()});
+  const q=$('#q'); q.oninput=()=>{st.q=q.value;renderList()};
+}
+function listItems(){
+  const q=st.q.toLowerCase();
+  let l=emails().filter(e=>BUCKET(e)===st.bucket&&(!q||(e.name+' '+e.subject+' '+e.body+' '+(e.startup||'')).toLowerCase().includes(q)));
+  const done=e=>(st.sent[e.id]||e.status==='sent')?1:0;
+  if(st.bucket==='you'){const o={critical:0,gap:1,reviewer:2,unknown:3,partner:4};l.sort((a,b)=>done(a)-done(b)||(o[a.why]??9)-(o[b.why]??9)||a.p-b.p||a.at.localeCompare(b.at));}
+  else l.sort((a,b)=>b.at.localeCompare(a.at));
+  return l;
+}
+function renderList(){
+  const l=listItems(); if(!st.sel&&l.length) st.sel=l[0].id;
+  let h='',last='';
+  l.slice(0,700).forEach(e=>{
+    const g=(st.sent[e.id]||e.status==='sent')?'Done':st.bucket==='you'?(WHY[e.why]||'Person'):day(e.at);
+    if(g!==last){h+=`<div class="group">${esc(g)}</div>`;last=g}
+    const chip='';
+    h+=`<button class="row" data-id="${esc(e.id)}" aria-current="${st.sel===e.id}"><div class="top"><span class="n">${chip}${esc(e.name)}</span><span class="t">${esc(hm(e.at))}</span></div><div class="s">${esc(e.brief&&e.brief.headline||e.summary)}</div></button>`});
+  $('#list').innerHTML=h||`<p class="empty" style="padding:20px">${LIVE&&!emails().length?'No emails yet. Run the replay, or email the demo inbox.':'Nothing here.'}</p>`;
+  document.querySelectorAll('.row').forEach(r=>r.onclick=()=>{st.sel=r.dataset.id;renderList();renderDetail()});
+}
+const BL={jumpstart:'Jumpstart',startup:'The startup',candidate:'The candidate',none:'No one'};
+const MV={reply:'Reply',reply_chase:'Reply and chase the startup',reply_inhouse:'Reply and act in-house',escalate:'Escalate to a person',no_reply:'No reply needed'};
+function triageBox(e){ if(!e.move) return '';
+  const w=e.who||{}; const rows=[['Candidate',w.candidate],['Jumpstart',w.jumpstart],['Startup',w.startup]].filter(r=>r[1]);
+  return `<div class="msg" style="white-space:normal"><b>${esc(BL[e.blocker]||'')} has to act next. ${esc(e.severity[0].toUpperCase()+e.severity.slice(1))}. ${esc(MV[e.move]||'')}.</b>${rows.length?'<div class="note">'+rows.map(r=>`${esc(r[0])}: ${esc(r[1])}`).join('<br>')+'</div>':''}${e.known_update?'<div class="note">We already had an update from the startup, so nobody needed chasing.</div>':''}</div>`;}
+function trail(e){
+  const t=[];
+  t.push(['Read as',`${words(e.intent)}${e.sub?' ('+words(e.sub)+')':''}, confidence ${(+e.conf).toFixed(2)}`]);
+  t.push(['Risk scan',e.flags&&e.flags.length?words(e.flags.join(', ')):'clear', e.flags&&e.flags.some(f=>!['multi_part','frustration','time_critical'].includes(f))]);
+  if(e.dup_of) t.push(['Context',`exact duplicate of ${e.dup_of}`]);
+  else if(e.merged_into) t.push(['Context',`wrote again before our reply went out; answered once in ${e.merged_into}`]);
+  else if(e.case&&e.case.startsWith('INC')) t.push(['Context','part of a known incident, handled as one case']);
+  else if(e.case&&e.case.startsWith('WATCH')) t.push(['Context',`startup pattern flagged to its account owner`]);
+  if(e.lane==='AUTO_REPLY') t.push(['Answer',`approved reply "${words(e.template)}"${e.kb_assumed?', help text to confirm':''}`]);
+  if(e.review) t.push(['Reviewer agent',`${e.review.ok?'agreed':'objected'}: ${e.review.reason}`, !e.review.ok]);
+  else if(e.lane==='HUMAN') t.push(['Reviewer agent','not asked: critical emails and live offers never get an automatic reply']);
+  const out = e.lane==='AUTO_REPLY'?`answered automatically, sends ${e.send_at?hm(e.send_at)+' on '+day(e.send_at):'after a short delay'}`
+    : e.lane==='HUMAN'?`to a person: ${(e.reasons||[])[0]||WHY[e.why]}${e.ack?'. Acknowledgement sent instantly':''}`
+    : `no reply: ${(e.reasons||[])[0]||words(e.intent)}`;
+  t.push(['Outcome',out]);
+  return `<ul class="trail">${t.map((x,i)=>`<li class="${i===t.length-1?'end':''} ${x[2]?'warn':''}"><span class="k">${esc(x[0])}.</span> <span class="v">${esc(x[1])}</span></li>`).join('')}</ul>`;
+}
+function renderDetail(){
+  const e=emails().find(x=>x.id===st.sel); const el=$('#detail');
+  if(!e){el.innerHTML=`<p class="empty">${LIVE&&!emails().length?'Waiting for email. This page updates by itself.':'Pick an email.'}</p>`;return}
+  const b=e.brief||{}, sent=st.sent[e.id]||e.status==='sent';
+  let h=`<h2>${esc(b.headline||e.summary)}</h2><div class="meta">${esc(e.name)} &lt;${esc(e.email)}&gt;, ${esc(e.stage)}${e.startup?', '+esc(e.startup):''}. ${esc(day(e.at))} ${esc(hm(e.at))}${e.p!=null&&e.lane==='HUMAN'?`. Priority P${e.p}`:''}</div>
+   <div class="msg"><b>${esc(e.subject)}</b>${esc(e.body)}</div><h3 class="h">Triage</h3>${triageBox(e)}<h3 class="h">What happened</h3>${trail(e)}`;
+  if(e.lane==='HUMAN'){
+    if(e.gap_key){const f=st.filled[e.gap_key];
+      h+=`<div class="gapbox"><b>Answer once: ${esc(e.gap_key)}</b><div class="note">Saved to the facts database, so every later email that needs it is answered automatically.</div>
+       <input id="gapv" placeholder="Type the fact" value="${esc(f||'')}"><button class="btn" id="gapsave" ${f?'disabled':''}>${f?'Saved':'Save to database'}</button> <span id="gapmsg" class="note"></span></div>`}
+    if(b.steps&&b.steps.length) h+=`<h3 class="h">Suggested next steps</h3><ul class="steps">${b.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
+    const r=st.edits[e.id]||{subject:(e.subject.toLowerCase().startsWith('re:')?'':'Re: ')+e.subject,body:b.reply||''};
+    h+=`<h3 class="h">Your reply</h3><input class="subj" id="rs" value="${esc(r.subject)}" ${sent?'disabled':''}><textarea id="rb" ${sent?'disabled':''}>${esc(r.body)}</textarea>
+     <div class="actions"><button class="btn" id="send" ${sent?'disabled':''}>${sent?'Sent':'Send reply'}</button><span class="note" id="sendmsg">${!LIVE?'Snapshot: marked as sent here, nothing leaves.':/@example\.com$/i.test(e.email)?'Sample address: logged, not emailed.':'Sends through Resend via n8n.'}</span></div>`;
+  } else if(e.reply){
+    h+=`<h3 class="h">${e.lane==='AUTO_REPLY'?'Reply sent automatically':'Reply'}</h3><div class="msg"><b>${esc(e.reply.subject)}</b>${esc(e.reply.body)}</div>`;
+  }
+  if(e.actions&&e.actions.length) h+=`<h3 class="h">Done automatically</h3><div class="note">${e.actions.map(words).map(esc).join(', ')}${e.proposed&&e.proposed.length?`. Waiting for one click: ${e.proposed.map(words).map(esc).join(', ')}`:''}</div>`;
+  el.innerHTML=h; el.scrollTop=0;
+  const rs=$('#rs'),rb=$('#rb'); if(rs){const save=()=>st.edits[e.id]={subject:rs.value,body:rb.value};rs.oninput=save;rb.oninput=save}
+  const s=$('#send'); if(s) s.onclick=async()=>{
+    s.disabled=true; const msg=$('#sendmsg');
+    if(LIVE){try{const r=await fetch('/send',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id:e.id,subject:rs.value,body:rb.value})});const j=await r.json();
+      if(!j.ok){msg.innerHTML=`<span class="bad">${esc(j.error)}</span>`;s.disabled=false;return}}catch(x){msg.innerHTML='<span class="bad">Engine not reachable</span>';s.disabled=false;return}}
+    st.sent[e.id]=1; header(); renderList(); renderDetail();
+    $('#sendmsg').innerHTML=`<span class="ok">${!LIVE?'Marked as sent.':/@example\.com$/i.test(e.email)?'Logged (sample address).':'Sent through Resend.'}</span>`};
+  const g=$('#gapsave'); if(g) g.onclick=async()=>{const v=$('#gapv').value.trim(); if(!v) return;
+    if(LIVE){try{await fetch('/fill',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams({key:e.gap_key,value:v})})}catch(x){}}
+    st.filled[e.gap_key]=v; renderDetail(); $('#gapmsg').textContent=LIVE?'Saved. The next email that needs this is answered automatically.':'Saved for this demo.'};
+}
+function bar(n,mx,c){return `<div class="fb"><i style="width:${Math.max(2,170*n/mx)}px;background:var(--${c})"></i>${(+n).toLocaleString()}</div>`}
+function renderReport(){
+  const M=D.metrics,S=D.scale,w1=S.week1,w2=S.week2,EV=D.eval,g=EV.gold,a=EV.adversarial,fr=D.first_run;
+  const rows=[['Answered automatically','auto',M.auto_replies,w2.auto_replies],['No reply needed','quiet',M.silent,w2.silent],
+   ['Critical','you',M.person.critical,w2.person.critical],['Reviewer held back','amber',M.person.reviewer,w2.person.reviewer],
+   ['Missing fact','amber',M.person.gap,w2.person.gap],['Live offer, talent partner','blue',M.partner,w2.partner]];
+  const mx=Math.max(...rows.map(r=>r[3]));
+  const f=D.facts_seed, stp=f.startups, keys=['visa_sponsorship','salary_range','interview_process','typical_feedback_days'];
+  const asked=new Set((D.facts_log||[]).filter(x=>x.event==='gap').map(x=>x.key));
+  const gaps=Object.values(stp).reduce((n,o)=>n+keys.filter(k=>o[k]==null).length,0);
+  const inc=D.incidents['INC-VIDEO'],days=Object.entries(inc.per_day),hm2=Math.max(...days.map(x=>x[1]));
+  const mo=Math.round(S.emails*4.33);
+  $('#report').innerHTML=`
+  <section><h2>The rule: escalate decisions, not emails</h2><p>Every human who writes gets a reply. A person only sees an email for five reasons: it's critical, a fact we need is missing, the reviewer agent objected, it couldn't be classified, or it's a live offer (which goes to the talent partner, not ops).</p>
+   <div class="kv"><div><small>Answered automatically</small><b>${M.auto_replies}</b></div><div><small>No reply needed</small><b>${M.silent}</b></div><div><small>Need ops</small><b>${M.ops_person_emails}</b></div><div><small>Live offers, talent partner</small><b>${M.partner}</b></div><div><small>Person time this week</small><b>${M.person_hours}h</b></div></div></section>
+  <section><h2>510 vs 5,100</h2><p class="note">The 10x run turns the week into ${S.emails.toLocaleString()} emails from different people and runs the whole engine: ${S.seconds} seconds. Week 2 is after the answers people gave in week 1 were saved.</p>
+   <div class="flow"><span></span><b class="note">Today: ${M.emails}</b><b class="note">10x, week 2: ${S.emails.toLocaleString()}</b>${rows.map(r=>`<span>${r[0]}</span>${bar(r[2],mx,r[1])}${bar(r[3],mx,r[1])}`).join('')}</div>
+   <div class="kv"><div><small>Person time today</small><b>${M.person_hours}h</b></div><div><small>At 10x, week 1</small><b>${w1.person_hours}h</b></div><div><small>At 10x, week 2</small><b>${w2.person_hours}h</b></div><div><small>By hand at 10x</small><b>${Math.round(S.emails*4/60)}h</b></div></div>
+   <p class="note">Critical cases are decisions, not emails: twenty reports about one startup are one decision applied twenty times. Missing facts caused ${w1.person.gap} emails in week 1 and ${w2.person.gap} in week 2. Minutes per item are assumptions: critical 5 (2 once decided), missing fact 2, reviewer 2, sign-off 1 a day. The clones keep today's mix of topics; real growth brings new phrasings, which go to a person.</p></section>
+  <section><h2>Cost at 10x</h2><p class="note">About ${mo.toLocaleString()} emails a month. List prices checked 20 Oct 2026.</p>
+   <table><tbody><tr><td>Engine</td><td>Rules on a small server</td><td>a few pounds</td></tr><tr><td>n8n</td><td>Self-hosted (${mo.toLocaleString()} runs a month is past n8n Cloud Pro's 10,000)</td><td>$5 to $30</td></tr>
+   <tr><td>Email sending</td><td>Resend Pro, 50,000 a month</td><td>$20</td></tr><tr><td>Claude</td><td>Reviewer on every automatic reply plus the unclassified tail, small model</td><td>tens of pounds</td></tr></tbody></table>
+   <div class="kv"><div><small>Software</small><b>under £100</b><small>a month</small></div><div><small>People with the engine</small><b>${w2.person_hours}h</b><small>a week</small></div><div><small>People by hand</small><b>${Math.round(S.emails*4/60)}h</b><small>a week</small></div></div></section>
+  <section><h2>Daily emails to startups</h2><p>Instead of ${(D.action_log||[]).filter(a=>a.type==='chase_startup').length} separate chases, each startup gets one email a day listing who's waiting and what we need. A person approves it before it goes. Answers go into the startup bank, so we only ask once.</p>
+   ${Object.values(D.startup_emails||{}).sort((a,b)=>b.waiting-a.waiting).slice(0,3).map(m=>`<details style="margin:8px 0"><summary style="cursor:pointer;font-weight:600">${esc(m.subject)}</summary><div class="msg" style="margin-top:8px"><b>To: ${esc(m.startup)}</b>${esc(m.body)}</div></details>`).join('')}
+   <p class="note">${Object.keys(D.startup_emails||{}).length} startup emails today, awaiting approval. The follow-up agent checks every date we promised candidates and updates them if the startup hasn't answered.</p></section>
+  <section><h2>Facts database</h2><p>What I'd collect so candidates get answers without a person. A mock with real gaps: ${gaps} of ${Object.keys(stp).length*keys.length} startup facts are missing. The first email needing a missing fact goes to a person; the answer is saved and nobody needs a person for it again. Startups are never chased for it.</p>
+   <div style="overflow:auto"><table><thead><tr><th>Startup</th><th>Sponsors visas</th><th>Salary range</th><th>Interview process</th><th>Days to feedback</th></tr></thead><tbody>
+   ${Object.keys(stp).sort().map(s=>`<tr><td>${esc(s)}</td>${keys.map(k=>{const v=st.filled[s+'.'+k]??stp[s][k];return `<td>${v==null?`<span class="gapcell">${asked.has(s+'.'+k)?'gap, asked':'gap'}</span>`:esc(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div></section>
+  <section><h2>Patterns found in the week</h2><p>Video upload outage: ${inc.reports} reports from ${inc.people} people became one incident at the third report (${esc(inc.detected_at)}); ${inc.reports_after_detection} arrived after that.</p>
+   <div class="hist">${days.map(([d,n])=>`<div style="height:${Math.max(3,100*n/hm2)}%"><b>${n}</b></div>`).join('')}</div><div class="hlab">${days.map(([d])=>`<span>${esc(day(d+' 12:00'))}</span>`).join('')}</div>
+   <p>${Object.values(D.watchlist).filter(w=>w.kind!=='review').map(w=>`<b>${esc(w.startup)}</b>: ${w.reasons.map(esc).join('; ')}`).join('<br>')}<br><span class="note">One alert to the account owner when a pattern first appears. Found from the emails, never typed in.</span></p></section>
+  <section><h2>Beyond the inbox: most of these emails shouldn't exist</h2><p>The engine clears the inbox at today's volume and at 10x. But the emails are symptoms of a few gaps in the product and the process. Fixing them would remove roughly half the inbound before any automation. Estimates, to validate.</p>
+   <table><thead><tr><th>Root cause</th><th>In the 510</th><th>What to build</th><th>Could remove</th></tr></thead><tbody>
+   <tr><td>Candidates can't see where they stand</td><td>190 (37%)</td><td>Application tracker with automatic updates when anything moves</td><td>about 130</td></tr>
+   <tr><td>Startups don't reply on time</td><td>chases cluster on 5 startups</td><td>Response targets by stage, reminders, a startup scorecard</td><td>with the tracker</td></tr>
+   <tr><td>Answers that should be self-serve</td><td>111 (22%)</td><td>Help centre, in-app profile editing, interview prep hub</td><td>about 65</td></tr>
+   <tr><td>Email hygiene and privacy</td><td>74 (15%)</td><td>One-click unsubscribe that works, list hygiene, self-service data requests</td><td>about 50</td></tr>
+   <tr><td>Bugs found by candidates</td><td>42 (8%)</td><td>Error monitoring and a status page</td><td>about 35</td></tr>
+   <tr><td>Matching gaps</td><td>36 (7%)</td><td>Visa, location, salary and remote filters</td><td>about 15</td></tr>
+   <tr><td>No line on startup conduct</td><td>unpaid trials, discrimination, withdrawn offer</td><td>Code of conduct at onboarding, report button, pause process</td><td>few, high risk</td></tr></tbody></table>
+   <p class="note">Order: the engine, the unsubscribe fix and the CV mix-up audit now; the application tracker and startup response targets next; then self-serve help, monitoring and the code of conduct. Full plan in docs/BEYOND_THE_INBOX.md.</p></section>
+  <section><h2>How it works</h2><ol>
+   <li><b>Arrives</b> and is stored once, so nothing is acted on twice.</li><li><b>Who is it:</b> matched to the candidate's stage, startup and history.</li>
+   <li><b>What do they want:</b> rules first; what they can't place goes to a person.</li><li><b>Risk scan on every email</b>, whatever the subject says.</li>
+   <li><b>Context:</b> repeat chasers, outages, startup patterns.</li><li><b>Find the answer:</b> approved replies, the facts database, or a workflow (rebooking, secure upload, data export).</li>
+   <li><b>Reviewer agent</b> reads email and reply cold and looks for reasons not to send.</li><li><b>Sends through Resend after 5 to 30 minutes</b>, 8am to 7pm; critical acknowledgements go instantly.</li>
+   <li><b>A person</b> gets the rest in Slack and here, with the agents' reasoning and a reply ready to send.</li><li><b>Learns:</b> answers are saved; human edits become test cases.</li></ol>
+   <p class="note">The engine decides; n8n moves email in and out; Resend sends. Changing the inbox, Slack or the sender is one node.</p></section>
+  <section><h2>How far to trust it</h2><div class="kv"><div><small>100 labelled emails, outcome matches</small><b>${(g.lane_exact*100).toFixed(0)}%</b></div><div><small>Needing a person, reached one</small><b>${g.gold_human-g.human_missed.length}/${g.gold_human}</b></div><div><small>24 written to break it, first run</small><b>${fr.pass}/${fr.n}</b></div></div>
+   <p class="note">In-sample: the rules were written from these emails, and the labels were updated for the new policy (every change is in eval/gold_v2.csv). The adversarial miss was fixed, so that set is spent. The honest next number is a blind relabel of fresh emails; the repo includes the tool. Facts and help text are placeholders for Jumpstart to confirm.</p></section>`;
+}
+
+function renderStory(){
+  const E=D.emails, M=D.metrics, S=D.scale;
+  const cnt=(k,v)=>E.filter(e=>e[k]===v).length;
+  const crit=new Set(E.filter(e=>e.why==='critical').map(e=>e.id));
+  const dots=(cls)=>`<div class="dots" aria-hidden="true">${E.map(e=>`<i class="${cls(e)}"></i>`).join('')}</div>`;
+  const hb=(rows)=>{const mx=Math.max(...rows.map(r=>r[1]));return rows.map(([l,n])=>`<div class="hb"><span>${esc(l)}</span><b>${n}</b><div class="bar" style="width:${Math.max(2,100*n/mx)}%"></div></div>`).join('')};
+  const ex=E.find(e=>e.template==='status_update'&&e.lane==='AUTO_REPLY');
+  $('#story').innerHTML=`
+  <section><h2>Jumpstart inbox: how to solve our inbox problem</h2>
+   <p class="lead">One week, ${M.emails} emails, ${M.unique_people} people. Each square below is one email. Nobody has replied to any of them.</p>
+   ${dots(()=> '')}<ul class="big"><li>Two people answer them by hand, alongside their other work</li><li>10x the volume is expected within 18 months</li><li>By hand, 10x is hundreds of hours a week</li></ul></section>
+  <section><h2>Why it’s bad</h2>
+   <p class="lead">The serious emails are hidden in the pile. The red squares are the ${crit.size} that needed someone urgently.</p>
+   ${dots(e=>crit.has(e.id)?'r':'')}
+   <ul class="big"><li>“Quick question about my profile” contains another candidate’s CV and home address</li><li>An unsubscribe ignored for a month is now a threat to report us to the ICO</li><li>An offer answer is due at 5pm today; another deadline has already passed</li><li>Startups asking for unpaid two-week trials and about age and family plans</li><li>Candidates feel ignored, and we own the relationship between candidate and startup</li></ul></section>
+  <section><h2>The gaps today</h2><ul class="big">
+   <li>Emails are read in the order they arrive, so urgent ones wait</li><li>Every reply is typed from scratch</li>
+   <li>No record of what we asked startups, or what they said</li><li>Candidates can’t see where they stand, so they keep chasing: ${cnt('intent','status_chase')+cnt('intent','application_status')} of the 510 are “where am I?”</li></ul></section>
+  <section><h2>Our approach: sort every email three ways</h2>
+   <div class="cols3">
+    <div><h3>Who holds the next action?</h3>${hb([['Jumpstart',cnt('blocker','jumpstart')],['The startup',cnt('blocker','startup')],['The candidate',cnt('blocker','candidate')]])}</div>
+    <div><h3>How serious is it?</h3>${hb([['Routine: sent automatically',cnt('severity','routine')],['Sensitive: checked before it’s sent',cnt('severity','sensitive')],['Critical: needs the team',cnt('severity','critical')]])}</div>
+    <div><h3>What needs to be done?</h3>${hb([['Reply',cnt('move','reply')],['Reply and fix it ourselves',cnt('move','reply_inhouse')],['Reply and chase the startup',cnt('move','reply_chase')],['No reply needed',cnt('move','no_reply')],['Pass to a person',cnt('move','escalate')]])}</div>
+   </div></section>
+  <section><h2>How it works</h2>
+   <div class="flowrow"><div><b>Inbox</b><span>An email arrives</span></div><div><b>n8n</b><span>Picks it up and carries it through</span></div><div class="hi"><b>Agent 1</b><span>Reads it, sorts it, writes the reply, checks it twice</span></div><div><b>Resend</b><span>Sends the reply after 5 to 30 minutes</span></div><div><b>Slack</b><span>Shows the team only what needs them</span></div><div class="hi"><b>Agent 2</b><span>Follows up: chases startups, keeps our promises</span></div></div>
+   <div class="panel2"><div><p class="lead" style="margin-bottom:8px">Every reply tells the candidate where they stand, like a live tracker:</p>${ex?`<div class="msg" style="font-size:14px">${esc(ex.reply.body)}</div>`:''}</div>
+    <div class="darkp"><h3>What goes to a person</h3><ul><li>Critical issues: data leaks, legal threats, discrimination, distress</li><li>Live job offers, to the talent partner</li><li>Questions we don’t have the answer to yet</li><li>Replies the second check isn’t happy with</li><li>Anything it can’t understand</li></ul></div></div></section>
+  <section><h2>The result on the 510</h2>
+   <p class="lead">Every square, sorted. ${M.auto_replies} answered automatically, ${M.silent} need no reply, ${M.ops_person_emails} to the team and ${M.partner} offers to the talent partner: about ${M.person_hours<1.5?"an hour":M.person_hours+" hours"} of work.</p>
+   ${dots(e=>e.lane==='AUTO_REPLY'?'a':e.lane==='AUTO_ACTION'?'q':e.why==='partner'?'b':'r')}
+   <div class="key"><span><i style="background:var(--auto)"></i>Answered automatically</span><span><i style="background:var(--quiet)"></i>No reply needed</span><span><i style="background:var(--you)"></i>To the team</span><span><i style="background:var(--blue)"></i>Offers, to the talent partner</span></div>
+   <button class="btn cta" id="toInbox">Open the inbox</button></section>
+  <section><h2>At 10x</h2>
+   <p class="lead">Run on ${S.emails.toLocaleString()} emails, not just modelled: sorted in ${S.seconds} seconds.</p>
+   ${hb([['People time today',M.person_hours],['People time at 10x, with the system',S.week2.person_hours],['People time at 10x, by hand',Math.round(S.emails*4/60)]]).replace(/<b>([\d.]+)<\/b>/g,'<b>$1 hours a week</b>')}
+   <p class="note">Software at 10x: under £100 a month. People time grows with decisions, not emails. Minutes per task are assumptions to check in the first fortnight.</p></section>
+  <section><h2>Three bigger problems we found</h2>
+   ${hb([['Candidates can’t see where they stand (37%): build a tracker in the app',37],['Questions the product should answer (22%): build a help centre',22],['Unsubscribes and privacy (15%): a preference centre that works',15],['Bugs candidates found first (8%): monitoring and a status page',8]])}
+   <p class="note">Fixing these would stop roughly half the emails being sent at all. My estimate.</p></section>
+  <section style="border:0"><h2>What we’d do next</h2><ul class="big">
+   <li>Run it alongside the team for two weeks, sending nothing</li><li>Switch on one type of email at a time once it matches the team’s answers</li>
+   <li>Connect it to our candidate data, so stages and feedback are real</li><li>Ask startups for their timelines at onboarding</li><li>Then build the tracker and help centre to cut emails at the source</li></ul></section>`;
+  const b=$('#toInbox'); if(b) b.onclick=()=>{st.view='inbox';st.bucket='you';render()};
+}
+function render(){
+  document.querySelectorAll('.views button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===st.view));
+  $('#inbox').hidden=st.view!=='inbox'; $('#filters').hidden=st.view!=='inbox'; $('#report').hidden=st.view!=='report'; $('#story').hidden=st.view!=='story';
+  header(); if(st.view==='inbox'){renderList();renderDetail()} else if(st.view==='report') renderReport(); else renderStory();
+}
+document.querySelectorAll('.views button').forEach(b=>b.onclick=()=>{st.view=b.dataset.v;render()});
+render();
+if(LIVE) D.live_emails_prev=(D.live_emails||[]).length;
+if(LIVE) setInterval(async()=>{try{const r=await fetch('/console/live');const j=await r.json();
+  const before=(D.live_emails||[]).length+'|'+(D.live_emails||[]).filter(e=>e.status==='sent').length, after=j.length+'|'+j.filter(e=>e.status==='sent').length;
+  if(before!==after){const isNew=j.length>(D.live_emails||[]).length; D.live_emails=j;
+    if(isNew&&j.length-(D.live_emails_prev||0)===1&&!st.q){const n=j[j.length-1]; if(BUCKET(n)===st.bucket) st.sel=n.id}
+    D.live_emails_prev=j.length;
+    if(st.view==='inbox'){header();renderList();if(isNew)renderDetail()}}}catch(x){}},3000);
+</script>
+</body>
+</html>

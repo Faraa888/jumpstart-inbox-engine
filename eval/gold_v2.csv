@@ -1,0 +1,101 @@
+email_id,gold_family,gold_lane,v1_lane,change_note
+E020,feedback,AUTO,AUTO,
+E024,product,AUTO,AUTO,
+E025,ooo,NOREPLY,NOREPLY,
+E026,account,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E030,chase,AUTO,AUTO,
+E031,application,AUTO,AUTO,
+E032,visa,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E033,thanks,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E036,visa,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E038,account,AUTO,AUTO,
+E043,optout,AUTO,AUTO,
+E046,account,AUTO,AUTO,
+E048,bug,AUTO,AUTO,
+E050,faq,AUTO,AUTO,
+E051,optout,AUTO,AUTO,
+E054,account,AUTO,AUTO,
+E055,optout,AUTO,AUTO,
+E060,conduct,HUMAN,HUMAN,
+E064,account,AUTO,AUTO,
+E067,application,AUTO,AUTO,
+E072,thanks,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E077,application,AUTO,AUTO,
+E081,feedback,AUTO,AUTO,
+E089,faq,AUTO,AUTO,
+E091,interview_urgent,NOREPLY,HUMAN,v2 policy: one reply per person per topic (answered in E500)
+E098,application,AUTO,AUTO,
+E102,chase,NOREPLY,AUTO,v2 policy: one reply per person per topic (answered in E215)
+E111,account,AUTO,AUTO,
+E115,chase,NOREPLY,AUTO,v2 policy: one reply per person per topic (answered in E200)
+E117,privacy,HUMAN,HUMAN,
+E120,referral,AUTO,AUTO,
+E121,application,AUTO,AUTO,
+E130,product,AUTO,AUTO,
+E146,application,AUTO,AUTO,
+E156,application,AUTO,AUTO,
+E161,optout,AUTO,AUTO,
+E166,faq,AUTO,AUTO,
+E168,safeguarding,HUMAN,HUMAN,
+E170,feedback,AUTO,AUTO,
+E175,product,AUTO,AUTO,
+E195,chase,HUMAN,HUMAN,
+E198,application,AUTO,AUTO,
+E201,thanks,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E213,chase,AUTO,AUTO,
+E214,bug_resolved,NOREPLY,NOREPLY,
+E218,bug,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E226,chase,NOREPLY,AUTO,v2 policy: one reply per person per topic (answered in E425)
+E229,faq,AUTO,AUTO,
+E230,product,AUTO,AUTO,
+E231,application,AUTO,AUTO,
+E235,thanks,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E236,faq,AUTO,AUTO,
+E241,offer,HUMAN,HUMAN,
+E253,faq,AUTO,AUTO,
+E269,account,AUTO,AUTO,
+E274,bug,AUTO,AUTO,
+E285,bug,AUTO,AUTO,
+E288,bug,AUTO,AUTO,
+E290,bug,AUTO,AUTO,
+E292,application,AUTO,AUTO,
+E296,faq,AUTO,AUTO,
+E297,conduct,HUMAN,HUMAN,
+E299,chase,AUTO,AUTO,
+E302,account,AUTO,AUTO,
+E303,application,AUTO,AUTO,
+E305,ooo,NOREPLY,NOREPLY,
+E306,privacy,AUTO,HUMAN,"v2 policy: statutory workflow, person signs off the export"
+E307,feedback,AUTO,AUTO,
+E310,ooo,NOREPLY,NOREPLY,
+E313,product,AUTO,AUTO,
+E315,bug,AUTO,AUTO,
+E316,bug,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E317,optout,AUTO,AUTO,
+E334,application,AUTO,AUTO,
+E338,accessibility,AUTO,HUMAN,v2 policy: standard adjustment offered
+E340,privacy,AUTO,HUMAN,v2 policy: secure-upload workflow
+E341,feedback,AUTO,AUTO,
+E342,product,AUTO,AUTO,
+E347,application,AUTO,AUTO,
+E351,privacy,HUMAN,HUMAN,
+E354,faq,AUTO,AUTO,
+E364,advice,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E368,offer,HUMAN,HUMAN,
+E371,chase,AUTO,AUTO,
+E372,account,AUTO,AUTO,
+E379,bug_resolved,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E380,bug,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E389,thanks,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E400,safeguarding,HUMAN,HUMAN,
+E412,bug_resolved,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E424,ooo,NOREPLY,NOREPLY,
+E444,chase,NOREPLY,NOREPLY,
+E447,account,AUTO,AUTO,
+E450,prep,AUTO,AUTO,
+E466,account,AUTO,REVIEW,"v2 policy: drafts are sent once the reviewer agent agrees, otherwise a person"
+E476,offer,HUMAN,HUMAN,
+E489,bug_resolved,AUTO,NOREPLY,v2 policy: every human gets a reply (close the loop)
+E494,application,AUTO,AUTO,
+E500,interview_urgent,AUTO,HUMAN,v2 policy: rebooking workflow
+E508,conduct,HUMAN,HUMAN,
