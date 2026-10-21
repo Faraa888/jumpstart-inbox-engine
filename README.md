@@ -1,5 +1,8 @@
 # Jumpstart inbox engine
 
+**Loom walkthrough:** https://www.loom.com/share/f7e54ad6d51c48aca17e6a5835c84350
+**Live console:** https://faraa888.github.io/jumpstart-inbox-engine/out/console.html
+
 Every candidate email is read, checked for risk and resolved. Most are answered automatically, a few go to a person, and nothing a person has answered once needs a person again.
 
 On the case data (510 emails, one week): **422 answered automatically, 70 silent (auto-responders, spam, duplicates, merged), 13 to ops and 5 live offers to the talent partner. About 1 hour of person time.**
